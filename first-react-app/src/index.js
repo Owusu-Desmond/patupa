@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function HelloWorld() {
+function Greetings() {
   return (
-    <div>Hello World</div>
+    <div><Greet/> <Name/></div>
   );
 }
+function Greet(){
+  var greet = "Hi";
+  return <span>{greet}</span>;
+}
+function Name(){
+  var name = "Desmond";
+  return <span>{name}</span>
+}
 ReactDOM.render(
-  <HelloWorld/>, document.querySelector('#root')
+  <Greetings/>, document.querySelector('#root')
 );
