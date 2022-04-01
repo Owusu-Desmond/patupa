@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 function Welcome(){
@@ -9,7 +9,7 @@ function Welcome(){
 }
 
 ReactDOM.render(
-  <Welcome/>,
+  <App/>,
   document.getElementById('root')
 );
 
