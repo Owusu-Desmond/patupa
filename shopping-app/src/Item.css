@@ -1,0 +1,35 @@
+.Item,.Item-left, .Item-right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.Item-image{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+}
+.Item-title-discription{
+    margin: auto 20px;
+}
+.Item-title{
+    font-weight: bold;
+}
+.Item-right{
+    margin: auto 20px;
+}
+.Item-price{
+    margin-right: 20px;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    border-radius:10px ;
+}
+.Item-button{
+    margin-left: 20px;
+    padding: 10px;
+    background-color: rgba(255, 179, 0, 0.961);
+    border-radius: 10px;
+    cursor: pointer;
+}
