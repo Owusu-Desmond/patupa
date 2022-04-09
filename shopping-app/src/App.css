@@ -1,6 +1,9 @@
 .App{
-  max-width: 800px;
-  margin:40px auto;
+  max-width: 900px;
+  margin:50px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
 }
 .App-nav{
   margin: 0;
