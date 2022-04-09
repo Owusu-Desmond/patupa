@@ -1,15 +1,15 @@
 import React from 'react';
 import Prototypes from 'prop-types';
 import './ItemPage.css';
-
-function ItemPage({items}){
+import Item from './Item';
+function ItemPage({items,onAddToCart}){
     return (
         <ul  className='ItemPage-items'>
             {
                 items.map(item => {
                     return (
                         <li key={item.id} className='ItemPage-item'>
-                            {item.name}
+                            <Item item={item} onAddToCart={() => onAddToCart({item})}/>
                         </li>   
                     ) 
                 })

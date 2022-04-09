@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Item({item, addToCart}){
+function Item({item, onAddToCart}){
     return (
         <div className="Item">
             <div className="Item-left">
@@ -17,7 +17,7 @@ function Item({item, addToCart}){
                 <div className="Item-price">
                     {item.price}
                 </div>
-                <button className="Item-button">
+                <button className="Item-button" onClick={onAddToCart}>
                     Add to cart
                 </button>
             </div>
