@@ -25,6 +25,7 @@ function Item({item, onAddToCart}){
                 </button>
             </div>
         </div>
+        
     );
 }
 

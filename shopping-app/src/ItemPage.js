@@ -6,13 +6,11 @@ function ItemPage({items,onAddToCart}){
     return (
         <ul  className='ItemPage-items'>
             {
-                items.map(item => {
-                    return (
-                        <li key={item.id} className='ItemPage-item'>
-                            <Item item={item} onAddToCart={() => onAddToCart({item})}/>
-                        </li>   
-                    ) 
-                })
+                items.map(item => 
+                    <li key={item.id} className='ItemPage-item'>
+                        <Item item={item} onAddToCart={() => onAddToCart(item)}/>
+                    </li>      
+                )
             }
         </ul>
     );

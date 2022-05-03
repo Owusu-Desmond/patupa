@@ -1,3 +1,7 @@
+.Item{
+    border-bottom: 1px solid rgb(12, 160, 194);
+    padding: 10px;
+}
 .Item,.Item-left, .Item-right{
     display: flex;
     flex-wrap: wrap;
