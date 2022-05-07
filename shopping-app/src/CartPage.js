@@ -1,7 +1,6 @@
 import uuid from 'react-uuid';
 import React from 'react';
 import Prototypes from 'prop-types';
-import './CartPage.css';
 import Item from './Item';
 function CartPage({items}){
     return (

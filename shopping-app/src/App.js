@@ -21,22 +21,32 @@ const App = () => {
         onTabChange = {setActiveTab}
       />
       <div>
-        {cart.length} items
+        {summarizeCart(cart).length} items
       </div>
       <main className='App-content'>
-        <Content tab={activeTab} onAddToCart={addToCart} cart={cart} />
+        <Content tab={activeTab} onAddToCart={addToCart} cart={summarizeCart(cart)} />
       </main>
     </div>
   )
 }
-
+const summarizeCart = (cart) => {
+  const groupItems = (cart) => cart.reduce((summary, item) => {
+    summary[item.id] = summary[item.id] || {
+      ...item,
+      count : 0
+    }
+    summary[item.id].count++;
+    return summary;
+  },{})
+  return Object.values(groupItems(cart));
+}
 const Content = ({cart,tab, onAddToCart}) =>{
   switch (tab) {
     case 'items':
       return <span> <ItemPage items={items} onAddToCart={onAddToCart}/></span>;
     case 'carts':
-      return <span> <CartPage items={cart}/></span>;
-    default:
+      return <span> <CartPage items={summarizeCart(cart)}/> </span>;
+    default: 
   }
 }
 export default App;
