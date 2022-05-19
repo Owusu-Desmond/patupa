@@ -18,7 +18,9 @@ function Item({item, children}){
             </div>
             <div className="Item-right">
                 <div className="Item-price">
-                    {item.price}
+                    <div>
+                        {item.price}
+                    </div> 
                 </div>
             </div>
             <div className="Item-right">
