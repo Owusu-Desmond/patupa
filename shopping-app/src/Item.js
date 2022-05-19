@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Item.css"
 
-function Item({item, onAddToCart}){
+function Item({item, children}){
     return (
         <div className="Item">
             <div className="Item-left">
@@ -20,10 +20,11 @@ function Item({item, onAddToCart}){
                 <div className="Item-price">
                     {item.price}
                 </div>
-                <button className="Item-button" onClick={onAddToCart}>
-                    Add to cart
-                </button>
             </div>
+            <div className="Item-right">
+                {children}
+            </div>
+            
         </div>
         
     );
