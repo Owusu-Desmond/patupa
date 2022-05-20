@@ -6,7 +6,9 @@ function Item({item, children}){
     return (
         <div className="Item">
             <div className="Item-left">
-                <div className="Item-image"></div>
+                <div className="Item-image">
+                    <img src={item.house} alt={item.name}/>
+                </div>
                 <div className="Item-title-discription">
                     <div className="Item-title">
                         {item.name}
@@ -20,7 +22,7 @@ function Item({item, children}){
                 <div className="Item-price">
                     <div>
                         {item.price}
-                    </div> 
+                    </div>
                 </div>
             </div>
             <div className="Item-right">

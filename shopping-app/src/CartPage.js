@@ -10,6 +10,9 @@ function CartPage({items}){
                 items.map((item) => 
                     <li key={uuid()} className='CartPage-item'>
                         <Item item={item}/>
+                        {/* <div>
+                         <button>Remove</button>
+                        </div>  */}
                     </li>   
                 )
             }

@@ -13,10 +13,10 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
-.Item-image{
+.Item-image > img{
     width: 120px;
     height: 120px;
-    border: 2px solid black;
+    border: 1px solid blue;
 }
 .Item-title-discription{
     margin: auto 10px;
