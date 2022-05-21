@@ -1,3 +1,27 @@
 .CartPage-items{
     list-style: none;
 }
+.Item-controls-button{
+    font-size: 18px;
+    font-weight: bold;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+.Item-controls-button:hover{
+    background-color: rgba(255, 255, 255, 0.434);
+}
+.Number-of-item{
+    border: 1px solid rgb(130, 40, 2);
+    background-color: rgb(233, 133, 25);
+    border-radius: 3px;
+    font-size: 25px;
+    margin: 5px;
+    width: 35px;
+    height: 40px;
+}
+.Number-of-item:hover{
+    width: 40px;
+    height: 45px;
+}
+
