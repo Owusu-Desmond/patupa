@@ -10,11 +10,14 @@ const Nav = ({activeTab,onTabChange}) => {
     return (
         <nav className='App-nav'>
             <ul>
+                <li className={tabClass('home')}>
+                    <button onClick={() => onTabChange('home')}>Home</button>
+                </li>
                 <li className={tabClass('items')}>
                     <button onClick={() => onTabChange('items')}>Items</button>
                 </li>
                 <li className={tabClass('carts')}>
-                <button onClick={() => onTabChange('carts')}>Carts</button>
+                    <button onClick={() => onTabChange('carts')}>Carts</button>
                 </li>
             </ul>
         </nav>

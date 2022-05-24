@@ -1,12 +1,13 @@
 import React , { useState } from 'react';
 import { items } from './static-data';
 import Nav from './Nav'
+import HomePage from './HomePage';
 import ItemPage from './ItemPage';
 import CartPage from './CartPage';
 import './App.css';
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState('items');
+  const [activeTab, setActiveTab] = useState('home');
   const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
@@ -46,6 +47,8 @@ const Content = ({cart,tab, onAddToCart}) =>{
       return <span> <ItemPage items={items} onAddToCart={onAddToCart}/></span>;
     case 'carts':
       return <span> <CartPage items={summarizeCart(cart)}/> </span>;
+    case 'home':
+      return <span> <HomePage /></span>
     default: 
   }
 }
