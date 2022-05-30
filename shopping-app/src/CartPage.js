@@ -13,7 +13,7 @@ function CartPage({items, onAddOne , onRemoveOne}){
                         <div className="Item-right">
                             <div className="Item-price">
                                 <div>
-                                    ${item.price}
+                                    ${item.price * item.count}
                                 </div>
                             </div>
                         </div>
