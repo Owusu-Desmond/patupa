@@ -10,11 +10,20 @@ function CartPage({items, onAddOne , onRemoveOne}){
                 items.map((item) => 
                     <li key={uuid()} className='CartPage-item'>
                         <Item item={item}>
+                        <div className="Item-right">
+                            <div className="Item-price">
+                                <div>
+                                    ${item.price}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="Item-right">
                             <div className='Item-controls'>
                                 <button onClick={() => onRemoveOne(item)}  className="Item-controls-button">-</button>
                                 <button className='Number-of-item'>{item.count}</button>
                                 <button onClick={() => onAddOne(item)} className="Item-controls-button">+</button>
                             </div>
+                        </div>
                         </Item>
                     </li>   
                 )
