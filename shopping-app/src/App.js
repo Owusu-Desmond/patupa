@@ -39,7 +39,7 @@ const App = () => {
         {summarizeCart(cart).length} items
       </div>
       <main className='App-content'>
-        <Content tab={activeTab} onAddToCart={addToCart} onRemoveItem={removeItem} cart={summarizeCart(cart)} />
+        <Content tab={activeTab} onAddToCart={addToCart} onRemoveItem={removeItem} cart={summarizeCart(cart)} getPopularItems={popularItems(items)}/>
       </main>
     </div>
   )
@@ -56,15 +56,26 @@ const summarizeCart = (cart) => {
   },{})
   return Object.values(groupItems(cart));
 }
+// get popular items and display in the home page
+const popularItems = (items) => {
+  let popItems = [];
+  items.forEach(item => {
+    if (item.popularity === true) {
+       popItems.push(item);
+    }
+  });
+  return popItems;
+}
+
 // switch app content to components
-const Content = ({cart,tab, onAddToCart , onRemoveItem}) =>{
+const Content = ({cart,tab, onAddToCart , onRemoveItem, getPopularItems}) =>{
   switch (tab) {
     case 'items':
       return <span> <ItemPage items={items} onAddToCart={onAddToCart}/></span>;
     case 'carts':
       return <span> <CartPage items={cart} onRemoveOne={onRemoveItem} onAddOne={onAddToCart}/> </span>;
     case 'home':
-      return <span> <HomePage /></span>
+      return <span> <HomePage popularItems={getPopularItems}/></span>
     default: 
   }
 }

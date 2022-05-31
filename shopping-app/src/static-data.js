@@ -10,35 +10,40 @@ let items = [
         name : 'Ipad pro',
         discription : 'This Ipad is not common in many countries',
         price : 400,
-        house : Ipad
+        house : Ipad,
+        popularity : true
     },
     {
         id : uuid(),
         name : 'Portable universal mifi',
         discription : 'New portable universal mifi that can pick any sim card',
         price : 50,
-        house : Wifi
+        house : Wifi,
+        popularity : false
     },
     {
         id : uuid(),
         name : 'MacBook pro',
         discription : '16GB ram, hash colour, 1TB space and high quality graphics',
         price : 1000,
-        house : MacBook
+        house : MacBook,
+        popularity : true
     },
     {
         id : uuid(),
         name : 'T-shirt',
         discription : 'Medium white T-shirt made with cotton',
         price : 10,
-        house : tShirt
+        house : tShirt,
+        popularity : false
     },
     {
         id : uuid(),
         name : 'Headphone',
         discription : 'Headphone with microphone and volume emulator',
         price : 17,
-        house : headphone
+        house : headphone,
+        popularity : true
     }
 ]
 
