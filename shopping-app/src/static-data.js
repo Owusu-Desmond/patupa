@@ -35,7 +35,7 @@ let items = [
     {
         id: uuid(),
         name: 'Ipad pro',
-        discription: 'Ipad pro with 120GB space and 8GB Ram which is not common in many countries',
+        description: 'Ipad pro with 120GB space and 8GB Ram which is not common in many countries',
         price: 400,
         house: Ipad,
         popularity: false
@@ -43,7 +43,7 @@ let items = [
     {
         id: uuid(),
         name: 'Huawei Y7a',
-        discription: 'Huawei Y7a - 84GB space and 8GB RAM - Choose Your Mobile',
+        description: 'Huawei Y7a - 84GB space and 8GB RAM - Choose Your Mobile',
         price: 300,
         house: huawei_Y7a,
         popularity: false
@@ -51,7 +51,7 @@ let items = [
     {
         id: uuid(),
         name: 'TCL 10 Plus',
-        discription: 'TCL 10 Plus - 64GB space and 4GB RAM - Choose Your Mobile',
+        description: 'TCL 10 Plus - 64GB space and 4GB RAM - Choose Your Mobile',
         price: 267,
         house: TCL_10_Plus,
         popularity: false
@@ -59,7 +59,7 @@ let items = [
     {
         id: uuid(),
         name: 'iPhone 14 pro',
-        discription: 'iPhone 14 release date features ]- 150GB space and 16GB Ram',
+        description: 'iPhone 14 release date features ]- 150GB space and 16GB Ram',
         price: 1072,
         house: iPhone_14_pro,
         popularity: true
@@ -68,7 +68,7 @@ let items = [
     {
         id: uuid(),
         name: 'Apple Phone charger',
-        discription: 'Universal apple phone charger with high capacity which store charges',
+        description: 'Universal apple phone charger with high capacity which store charges',
         price: 10,
         house: apple_phone_charger,
         popularity: true
@@ -77,7 +77,7 @@ let items = [
     {
         id: uuid(),
         name: 'Apple Phone charger',
-        discription: 'Blue Whale Massage Gaming Chair with Footrest',
+        description: 'Blue Whale Massage Gaming Chair with Footrest',
         price: 70,
         house: gaming_chair,
         popularity: false
@@ -85,7 +85,7 @@ let items = [
     {
         id: uuid(),
         name: 'Computer Desk Chair',
-        discription: 'Classic Puresoft Padded Mid-Back Office Computer Desk Chair with Armrest',
+        description: 'Classic Puresoft Padded Mid-Back Office Computer Desk Chair with Armrest',
         price: 86,
         house: computer_desk_chair,
         popularity: true
@@ -94,7 +94,7 @@ let items = [
     {
         id: uuid(),
         name: 'Portable universal mifi',
-        discription: 'New portable universal mifi that can use any sim card',
+        description: 'New portable universal mifi that can use any sim card',
         price: 50,
         house: Wifi,
         popularity: false
@@ -102,7 +102,7 @@ let items = [
     {
         id: uuid(),
         name: 'Bag with headphone',
-        discription: 'Popular Bag which can be use to play music and chargerble',
+        description: 'Popular Bag which can be use to play music and chargerble',
         price: 70,
         house: bag_with_headphone,
         popularity: true
@@ -110,7 +110,7 @@ let items = [
     {
         id: uuid(),
         name: 'Computer Mouse',
-        discription: 'Computer mouse which can connect using USB or bluetooth connection',
+        description: 'Computer mouse which can connect using USB or bluetooth connection',
         price: 13,
         house: computer_mouse,
         popularity: true
@@ -118,7 +118,7 @@ let items = [
     {
         id: uuid(),
         name: 'Headphone',
-        discription: 'Headphone with microphone and volume emulator',
+        description: 'Headphone with microphone and volume emulator',
         price: 17,
         house: headphone,
         popularity: true
@@ -126,7 +126,7 @@ let items = [
     {
         id: uuid(),
         name: 'BENGOO Headset',
-        discription: 'BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One PS5 Controller, Noise Cancelling Over Ear Headphones with Mic',
+        description: 'BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One PS5 Controller, Noise Cancelling Over Ear Headphones with Mic',
         price: 17,
         house: gaming_headset,
         popularity: true
@@ -135,7 +135,7 @@ let items = [
     {
         id: uuid(),
         name: 'MacBook pro',
-        discription: '16GB ram, hash colour, 1TB space and high quality graphics',
+        description: '16GB ram, hash colour, 1TB space and high quality graphics',
         price: 1000,
         house: MacBook,
         popularity: true
@@ -143,7 +143,7 @@ let items = [
     {
         id: uuid(),
         name: 'Lenovo Y700 14',
-        discription: 'Lenovo Y700 14 a Good Gaming Laptop, 16GB ram, hash colour, 500GB space and high quality graphics',
+        description: 'Lenovo Y700 14 a Good Gaming Laptop, 16GB ram, hash colour, 500GB space and high quality graphics',
         price: 600,
         house: lenovo_Y700,
         popularity: false
@@ -151,7 +151,7 @@ let items = [
     {
         id: uuid(),
         name: 'Dell XPS 17',
-        discription: 'Dell XPS 17 Laptop with 10th Gen Intel Core i7 CPU',
+        description: 'Dell XPS 17 Laptop with 10th Gen Intel Core i7 CPU',
         price: 800,
         house: dell_xps_17,
         popularity: true
@@ -159,7 +159,7 @@ let items = [
     {
         id: uuid(),
         name: 'Acer Laptop Aspire',
-        discription: 'Acer Laptop Aspire E1 E1-532-2635 Intel Celeron 2957U (1.40 GHz) 4 GB',
+        description: 'Acer Laptop Aspire E1 E1-532-2635 Intel Celeron 2957U (1.40 GHz) 4 GB',
         price: 800,
         house: acer_laptop_aspire,
         popularity: true
@@ -168,7 +168,7 @@ let items = [
     {
         id: uuid(),
         name: 'Cinema Camera',
-        discription: 'Blackmagic Design 2.5K True Digital Cinema Camera EF with Built-In SSD',
+        description: 'Blackmagic Design 2.5K True Digital Cinema Camera EF with Built-In SSD',
         price: 60,
         house: bmd_cinema_camera,
         popularity: true
@@ -176,7 +176,7 @@ let items = [
     {
         id: uuid(),
         name: 'Canon Camera',
-        discription: 'Buy a Canon PowerShot G7 X Mark II Compact Digital Camera Black online',
+        description: 'Buy a Canon PowerShot G7 X Mark II Compact Digital Camera Black online',
         price: 500,
         house: canon_camera,
         popularity: false
@@ -184,7 +184,7 @@ let items = [
     {
         id: uuid(),
         name: 'Olympus Camera',
-        discription: '12MP Digital Camera with 26x Wide-Angle Optical Zoom, 2.7" LCD and HDMI',
+        description: '12MP Digital Camera with 26x Wide-Angle Optical Zoom, 2.7" LCD and HDMI',
         price: 400,
         house: olympus_camera,
         popularity: false
@@ -193,7 +193,7 @@ let items = [
     {
         id: uuid(),
         name: 'T-shirt',
-        discription: 'Medium white T-shirt made with cotton',
+        description: 'Medium white T-shirt made with cotton',
         price: 10,
         house: tShirt,
         popularity: false
@@ -201,7 +201,7 @@ let items = [
     {
         id: uuid(),
         name: 'Graphic Printed T-Shirt',
-        discription: 'CreativiT Graphic Printed T-Shirt for Unisex Everyday is a Good Day to',
+        description: 'CreativiT Graphic Printed T-Shirt for Unisex Everyday is a Good Day to',
         price: 10,
         house: GP_tShirt,
         popularity: false
@@ -210,7 +210,7 @@ let items = [
     {
         id: uuid(),
         name: 'Spring & Autumn Shoes',
-        discription: 'Nice Men Shoes Spring And Autumn New Arrival Men Flats Casual Leather',
+        description: 'Nice Men Shoes Spring And Autumn New Arrival Men Flats Casual Leather',
         price: 20,
         house: spring_autumn_shoes,
         popularity: true
@@ -218,7 +218,7 @@ let items = [
     {
         id: uuid(),
         name: 'Toe Work Shoes',
-        discription: "Men's Rockport Works Nice Ride Composite Toe Work Shoes, Brown",
+        description: "Men's Rockport Works Nice Ride Composite Toe Work Shoes, Brown",
         price: 15,
         house: toe_work_shoes,
         popularity: false
@@ -226,7 +226,7 @@ let items = [
     {
         id: uuid(),
         name: 'Mens canvas shoes',
-        discription: "Time to source smarter! | Mens sneakers casual, Mens canvas shoes",
+        description: "Time to source smarter! | Mens sneakers casual, Mens canvas shoes",
         price: 15,
         house: mens_canvas_shoes,
         popularity: true
