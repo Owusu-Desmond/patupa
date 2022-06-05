@@ -1,30 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100;1,500&display=swap');
-.Home-container{
-    display: block;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100;1,500&display=swap");
+.Home-container {
+  display: block;
 }
 
-.Animate-welcome
-{
-    text-align: center;
-    text-transform: uppercase;
-    background-image: linear-gradient(
-        -225deg,
-        #231557 0%,
-        #44107a 29%,
-        #ff1361 67%,
-        #fff800 100%
-    );
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 2s linear infinite;
-    font-size: 30px;
-    font-family: 'Roboto Mono', monospace;
-
+.Animate-welcome {
+  text-align: center;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  font-size: 30px;
+  font-family: "Roboto Mono", monospace;
 }
 
 @keyframes textclip {
@@ -32,11 +30,35 @@
     background-position: 200% center;
   }
 }
-.Home-image{
-    width: 100%;
+.Home-image {
+  width: 100%;
 }
-.Home-description{
-    font-size: 20px;
-    font-family: 'Roboto Mono', monospace;
-    text-align: center;
+.Home-description {
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+}
+/* popularItems-container */
+.popularItems-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+.popularItem-card {
+  width: 100%;
+  background-color: #d1c9c9;
+  border-radius: 10px;
+}
+.popularItem-image {
+  width: 85%;
+  margin: 7.5%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.popularItem-image:hover {
+  width: 94%;
+  margin: 3%;
 }

@@ -71,7 +71,7 @@ let items = [
         description: 'Universal apple phone charger with high capacity which store charges',
         price: 10,
         house: apple_phone_charger,
-        popularity: true
+        popularity: false
     },
     // chairs
     {
@@ -80,7 +80,7 @@ let items = [
         description: 'Blue Whale Massage Gaming Chair with Footrest',
         price: 70,
         house: gaming_chair,
-        popularity: false
+        popularity: true
     },
     {
         id: uuid(),
@@ -88,7 +88,7 @@ let items = [
         description: 'Classic Puresoft Padded Mid-Back Office Computer Desk Chair with Armrest',
         price: 86,
         house: computer_desk_chair,
-        popularity: true
+        popularity: false
     },
     // computer hardwares
     {
@@ -113,7 +113,7 @@ let items = [
         description: 'Computer mouse which can connect using USB or bluetooth connection',
         price: 13,
         house: computer_mouse,
-        popularity: true
+        popularity: false
     },
     {
         id: uuid(),
@@ -121,7 +121,7 @@ let items = [
         description: 'Headphone with microphone and volume emulator',
         price: 17,
         house: headphone,
-        popularity: true
+        popularity: false
     },
     {
         id: uuid(),
@@ -162,7 +162,7 @@ let items = [
         description: 'Acer Laptop Aspire E1 E1-532-2635 Intel Celeron 2957U (1.40 GHz) 4 GB',
         price: 800,
         house: acer_laptop_aspire,
-        popularity: true
+        popularity: false
     },
     // digital cameras
     {
