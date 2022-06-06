@@ -30,6 +30,11 @@ import spring_autumn_shoes from "./images/items/spring_autumn_shoes.jpg";
 import bmd_cinema_camera from "./images/items/bmd_cinema_camera.jpg";
 import canon_camera from "./images/items/canon_camera.jpg";
 import olympus_camera from "./images/items/olympus_camera.jpg";
+// watches 
+import mini_focus_mens_watch from "./images/items/mini_focus_mens_watch.jpg";
+import luxury_watch from "./images/items/luxury_watch.jpg";
+import fngeen_watch from "./images/items/fngeen_watch.jpg";
+import chronograph_quartz_watch from "./images/items/chronograph_quartz_watch.jpg";
 let items = [
     // mobile phones
     {
@@ -38,7 +43,7 @@ let items = [
         description: 'Ipad pro with 120GB space and 8GB Ram which is not common in many countries',
         price: 400,
         house: Ipad,
-        popularity: false
+        popularity: true
     },
     {
         id: uuid(),
@@ -73,10 +78,43 @@ let items = [
         house: apple_phone_charger,
         popularity: false
     },
+    // watches
+    {
+        id: uuid(),
+        name: 'Mini Focus Mens Watch',
+        description: 'Mini Focus 0285 Mens Watch Top Brand Stainless Steel Luxury Sport Date Clock Watch Men Waterproof Quartz Watch',
+        price: 500,
+        house: mini_focus_mens_watch,
+        popularity: true
+    },
+    {
+        id: uuid(),
+        name: 'Luxury Watch',
+        description: '2022 Top Brand Luxury Watch Fashion Casual Military Quartz Sports Wristwatch Full Steel Waterproof',
+        price: 450,
+        house: luxury_watch,
+        popularity: false
+    },
+    {
+        id: uuid(),
+        name: 'Chronograph Quartz Watch',
+        description: 'New Fashion Mens Watches Stainless Steel Top Brand Luxury Sports Chronograph Quartz Watch',
+        price: 350,
+        house: chronograph_quartz_watch,
+        popularity: false
+    },
+    {
+        id: uuid(),
+        name: 'Fngeen Watch',
+        description: "Fngeen Watch Brand Automatic Mesh Belt Men's Waterproof Luminous Diamond Double-sided Hollow Tourbillon",
+        price: 400,
+        house: fngeen_watch,
+        popularity: true
+    },
     // chairs
     {
         id: uuid(),
-        name: 'Apple Phone charger',
+        name: 'Gaming Chair',
         description: 'Blue Whale Massage Gaming Chair with Footrest',
         price: 70,
         house: gaming_chair,
@@ -97,7 +135,7 @@ let items = [
         description: 'New portable universal mifi that can use any sim card',
         price: 50,
         house: Wifi,
-        popularity: false
+        popularity: true
     },
     {
         id: uuid(),
@@ -213,7 +251,7 @@ let items = [
         description: 'Nice Men Shoes Spring And Autumn New Arrival Men Flats Casual Leather',
         price: 20,
         house: spring_autumn_shoes,
-        popularity: true
+        popularity: false
     },
     {
         id: uuid(),
