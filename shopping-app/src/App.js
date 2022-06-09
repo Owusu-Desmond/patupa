@@ -35,9 +35,6 @@ const App = () => {
         activeTab={activeTab}
         onTabChange={setActiveTab}
       />
-      <div>
-        {summarizeCart(cart).length} items
-      </div>
       <main className='App-content'>
         <Content tab={activeTab} onAddToCart={addToCart} onRemoveItem={removeItem} cart={summarizeCart(cart)} getPopularItems={popularItems(items)} />
       </main>
