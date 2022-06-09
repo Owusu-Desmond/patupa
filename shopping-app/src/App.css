@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .App {
   width: 80%;
   margin: 50px auto;
   background-color: white;
   padding: 20px;
   border-radius: 20px;
+  background-color: #f8e8e8;
+  font-family: 'Poppins', sans-serif;
+
 }
 .App-nav {
   margin: 0;

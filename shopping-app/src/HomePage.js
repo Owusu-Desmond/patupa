@@ -12,15 +12,22 @@ function HomePage({ popularItems }) {
             <div className="popularItems-container">
                 {
                     popularItems.map(item =>
-                        <div className="popularItem-card">
-                            <img className="popularItem-image" src={item.house} alt={item.name} />
-                            <div className="popularItem-title">
-                                {item.name}
+                        <div key={item.id} className="popularItem-card">
+                            <div>
+                                <img className="popularItem-image" src={item.house} alt={item.name} />
                             </div>
-                            <div className="popularItem-description">
-                                {item.description}
+                            <div className="popularItem-content">
+                                <div className="popularItem-title">
+                                    {item.name}
+                                </div>
+                                <div className="popularItem-description">
+                                    {item.description}
+                                </div>
                             </div>
-                            <div className="popularItem-price">${item.price}</div>
+                            <div className="popularItem-price">Price : ${item.price}</div>
+                            <div className="popularItem-button">
+                                <button>BUY</button>
+                            </div>
                         </div>
 
                     )
