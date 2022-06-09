@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100;1,500&display=swap");
 .Home-container {
   display: block;
 }
@@ -22,7 +21,6 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   font-size: 30px;
-  font-family: "Roboto Mono", monospace;
 }
 
 @keyframes textclip {
@@ -35,20 +33,27 @@
 }
 .Home-description {
   font-size: 20px;
-  font-family: "Roboto Mono", monospace;
   text-align: center;
+  word-spacing: 10px;
+  font-style: italic;
+}
+h2{
+    color: #3717ad;
 }
 /* popularItems-container */
 .popularItems-container {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, auto));
+  grid-gap: 20px;
 }
+/* popular item card  */
 .popularItem-card {
   width: 100%;
   background-color: #d1c9c9;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .popularItem-image {
   width: 85%;
@@ -61,4 +66,53 @@
 .popularItem-image:hover {
   width: 94%;
   margin: 3%;
+}
+.popularItem-content{
+    margin: 7.5%;
+    margin-top: 0px;
+    flex: 1;
+}
+.popularItem-title{
+    font-weight: 700;
+    opacity: 0.9;
+    line-height: 40px;
+    font-size: 20px;
+    color: #3717ad;
+}
+.popularItem-description{
+    word-spacing: 7px;
+    line-height: 20px;
+    padding-top: 10px;
+
+}
+.popularItem-price{
+    margin-top: 10px;
+    color: #cc8e1c;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 7.5%;
+    margin-bottom: 10px;
+}
+.popularItem-button > button{
+    width: 100%;
+    background-color: #cc8e1c;
+    display: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 500;
+    display: none;
+    height: 40px;
+ 
+}
+/* Display buy button when card onhover */
+.popularItem-card:hover > .popularItem-button > button{
+    display: block;
+
+}
+.popularItem-button > button:active{
+    transform: translateY(5px);
+}
+.popularItem-button > button:hover{
+    background-color: #9c6806;
 }
