@@ -1,5 +1,5 @@
 import React from 'react';
-import Prototypes from 'prop-types';
+import PropTypes from 'prop-types';
 import welcomeImage from './images/shopping-welcome.jpg';
 import './HomePage.css';
 
@@ -8,7 +8,7 @@ function HomePage({ popularItems }) {
     <div className="Home-container">
       <h1 className="Animate-welcome">Hello, welcome to PaTuPa shopping</h1>
       <img src={welcomeImage} alt="shopping welcome" className="Home-image" />
-      <p className="Home-description">Buy good's from PaTuPa shopping for free of charge (No tax)</p>
+      <p className="Home-description">Buy good`&apos`s from PaTuPa shopping for free of charge (No tax)</p>
       <h2>Popular Items</h2>
       <div className="popularItems-container">
         {
@@ -30,7 +30,7 @@ function HomePage({ popularItems }) {
                           {item.price}
                         </div>
                         <div className="popularItem-button">
-                          <button>BUY</button>
+                          <button type="button">BUY</button>
                         </div>
                       </div>
                     ))
@@ -39,7 +39,7 @@ function HomePage({ popularItems }) {
     </div>
   );
 }
-HomePage.Prototypes = {
-  popularItems: Prototypes.array.isRequired,
+HomePage.propTypes = {
+  popularItems: PropTypes.arrayOf.isRequired,
 };
 export default HomePage;

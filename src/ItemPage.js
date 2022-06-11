@@ -1,5 +1,5 @@
 import React from 'react';
-import Prototypes from 'prop-types';
+import PropTypes from 'prop-types';
 import './ItemPage.css';
 import Item from './Item';
 
@@ -19,7 +19,7 @@ function ItemPage({ items, onAddToCart }) {
                         </div>
                       </div>
                       <div className="Item-right">
-                        <button className="Item-button" onClick={() => onAddToCart(item)}>
+                        <button type="button" className="Item-button" onClick={() => onAddToCart(item)}>
                           Add to cart
                         </button>
                       </div>
@@ -32,8 +32,9 @@ function ItemPage({ items, onAddToCart }) {
   );
 }
 
-ItemPage.Prototypes = {
-  items: Prototypes.array.isRequired,
+ItemPage.propTypes = {
+  items: PropTypes.arrayOf.isRequired,
+  onAddToCart: PropTypes.func.isRequired,
 };
 
 export default ItemPage;

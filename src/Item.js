@@ -24,9 +24,9 @@ function Item({ item, children }) {
   );
 }
 
-Item.Prototype = {
-  item: PropTypes.object.isRequired,
-  addToCart: PropTypes.func.isRequired,
+Item.propTypes = {
+  item: PropTypes.arrayOf.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default Item;

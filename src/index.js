@@ -4,10 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-function Welcome() {
-  return <div>Welcome to my shopping app</div>;
-}
-
 ReactDOM.render(
   <App />,
   document.getElementById('root'),

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { items } from './static-data';
+import PropTypes from 'prop-types';
+import items from './static-data';
 import Nav from './Nav';
 import HomePage from './HomePage';
 import ItemPage from './ItemPage';
@@ -9,21 +10,43 @@ import './App.css';
 const App = () => {
   const [activeTab, setActiveTab] = useState('home');
   const [cart, setCart] = useState([]);
-
+  // add Items to cart
   const addToCart = (item) => {
     setCart((previous) => [...previous, item]);
-    console.log(cart);
   };
   const removeItem = (item) => {
     const itemIndex = cart.findIndex((i) => i.id === item.id);
     if (itemIndex >= 0) {
-      console.log(200);
       setCart((cart) => {
         const cartCopy = [...cart];
         cartCopy.splice(itemIndex, 1);
         return cartCopy;
       });
     }
+  };
+  // summarize cart to ignore already added items
+  const summarizeCart = (cart) => {
+    let summaryItem;
+    const groupItems = (cart) => cart.reduce((summary, item) => {
+      summaryItem = summary[item.id];
+      summaryItem = summaryItem || {
+        ...item,
+        count: 0,
+      };
+      summaryItem.count += 1;
+      return summary;
+    }, {});
+    return Object.values(groupItems(cart));
+  };
+  // get popular items and display in the homepage
+  const popularItems = (items) => {
+    const popItems = [];
+    items.forEach((item) => {
+      if (item.popularity === true) {
+        popItems.push(item);
+      }
+    });
+    return popItems;
   };
   return (
     <div className="App">
@@ -32,32 +55,16 @@ const App = () => {
         onTabChange={setActiveTab}
       />
       <main className="App-content">
-        <Content tab={activeTab} onAddToCart={addToCart} onRemoveItem={removeItem} cart={summarizeCart(cart)} getPopularItems={popularItems(items)} />
+        <Content
+          tab={activeTab}
+          onAddToCart={addToCart}
+          onRemoveItem={removeItem}
+          cart={summarizeCart(cart)}
+          getPopularItems={popularItems(items)}
+        />
       </main>
     </div>
   );
-};
-// summarize cart to ignore already added items
-const summarizeCart = (cart) => {
-  const groupItems = (cart) => cart.reduce((summary, item) => {
-    summary[item.id] = summary[item.id] || {
-      ...item,
-      count: 0,
-    };
-    summary[item.id].count++;
-    return summary;
-  }, {});
-  return Object.values(groupItems(cart));
-};
-// get popular items and display in the home page
-const popularItems = (items) => {
-  const popItems = [];
-  items.forEach((item) => {
-    if (item.popularity === true) {
-      popItems.push(item);
-    }
-  });
-  return popItems;
 };
 
 // switch app content to components
@@ -72,7 +79,7 @@ const Content = ({
           <ItemPage items={items} onAddToCart={onAddToCart} />
         </span>
       );
-    case 'carts':
+    case 'cart':
       return (
         <span>
           {' '}
@@ -88,6 +95,16 @@ const Content = ({
         </span>
       );
     default:
+      return (
+        <span>Ops! You are missed.</span>
+      );
   }
+};
+Content.propTypes = {
+  cart: PropTypes.arrayOf.isRequired,
+  tab: PropTypes.string.isRequired,
+  onAddToCart: PropTypes.func.isRequired,
+  onRemoveItem: PropTypes.func.isRequired,
+  getPopularItems: PropTypes.func.isRequired,
 };
 export default App;
