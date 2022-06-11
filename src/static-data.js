@@ -1,40 +1,40 @@
 import uuid from 'react-uuid';
 // import mobile phones
-import huawei_Y7a from './images/items/huawei_Y7a.jpg';
-import TCL_10_Plus from './images/items/TCL_10_Plus.jpg';
-import Ipad from './images/items/Ipad.jpg';
-import iPhone_14_pro from './images/items/iPhone_14_pro.png';
+import huaweiY7a from './images/items/huawei_Y7a.jpg';
+import tcl10Plus from './images/items/TCL_10_Plus.jpg';
+import ipad from './images/items/Ipad.jpg';
+import iPhone14Pro from './images/items/iPhone_14_pro.png';
 // import shelters
-import GP_tShirt from './images/items/GP_tShirt.jpg';
+import gtTShirt from './images/items/GP_tShirt.jpg';
 import tShirt from './images/items/T-shirt.jpg';
 // import computer hardwares
-import gaming_headset from './images/items/gaming_headset.jpg';
-import Wifi from './images/items/universal-wifi.jpg';
+import gamingHeadset from './images/items/gaming_headset.jpg';
+import wifi from './images/items/universal-wifi.jpg';
 import headphone from './images/items/headphone.jpg';
-import apple_phone_charger from './images/items/apple_phone_charger.jpg';
-import bag_with_headphone from './images/items/bag_with_headphone.jpg';
-import computer_mouse from './images/items/computer_mouse.jpg';
+import applePhoneCharger from './images/items/apple_phone_charger.jpg';
+import bagWithHeadphone from './images/items/bag_with_headphone.jpg';
+import computerMouse from './images/items/computer_mouse.jpg';
 // import laptops
-import lenovo_Y700 from './images/items/lenovo_Y700.png';
-import dell_xps_17 from './images/items/dell_xps_17.jpg';
-import MacBook from './images/items/MacBook.jpg';
-import acer_laptop_aspire from './images/items/acer_laptop_aspire.jpg';
+import lenovoY700 from './images/items/lenovo_Y700.png';
+import dellXPS17 from './images/items/dell_xps_17.jpg';
+import macBook from './images/items/MacBook.jpg';
+import acerLaptopAspire from './images/items/acer_laptop_aspire.jpg';
 // import chairs
-import computer_desk_chair from './images/items/computer_desk_chair.jpg';
-import gaming_chair from './images/items/gaming_chair.jpg';
+import computerDeskChair from './images/items/computer_desk_chair.jpg';
+import gamingChair from './images/items/gaming_chair.jpg';
 // import shoes
-import mens_canvas_shoes from './images/items/mens_canvas_shoes.jpg';
-import toe_work_shoes from './images/items/toe_work_shoes.jpg';
-import spring_autumn_shoes from './images/items/spring_autumn_shoes.jpg';
+import mensCanvasShoes from './images/items/mens_canvas_shoes.jpg';
+import toeWorkShoes from './images/items/toe_work_shoes.jpg';
+import springAutumnShoes from './images/items/spring_autumn_shoes.jpg';
 // import digital cameras
-import bmd_cinema_camera from './images/items/bmd_cinema_camera.jpg';
-import canon_camera from './images/items/canon_camera.jpg';
-import olympus_camera from './images/items/olympus_camera.jpg';
+import bmdCinemaCamera from './images/items/bmd_cinema_camera.jpg';
+import canonCamera from './images/items/canon_camera.jpg';
+import olympusCamera from './images/items/olympus_camera.jpg';
 // watches
-import mini_focus_mens_watch from './images/items/mini_focus_mens_watch.jpg';
-import luxury_watch from './images/items/luxury_watch.jpg';
-import fngeen_watch from './images/items/fngeen_watch.jpg';
-import chronograph_quartz_watch from './images/items/chronograph_quartz_watch.jpg';
+import miniFocusMensWatch from './images/items/mini_focus_mens_watch.jpg';
+import luxuryWatch from './images/items/luxury_watch.jpg';
+import fngeenWatch from './images/items/fngeen_watch.jpg';
+import chronographQuartzWatch from './images/items/chronograph_quartz_watch.jpg';
 
 const items = [
   // mobile phones
@@ -43,7 +43,7 @@ const items = [
     name: 'Ipad pro',
     description: 'Ipad pro with 120GB space and 8GB Ram which is not common in many countries',
     price: 400,
-    house: Ipad,
+    house: ipad,
     popularity: true,
   },
   {
@@ -51,7 +51,7 @@ const items = [
     name: 'Huawei Y7a',
     description: 'Huawei Y7a - 84GB space and 8GB RAM - Choose Your Mobile',
     price: 300,
-    house: huawei_Y7a,
+    house: huaweiY7a,
     popularity: false,
   },
   {
@@ -59,7 +59,7 @@ const items = [
     name: 'TCL 10 Plus',
     description: 'TCL 10 Plus - 64GB space and 4GB RAM - Choose Your Mobile',
     price: 267,
-    house: TCL_10_Plus,
+    house: tcl10Plus,
     popularity: false,
   },
   {
@@ -67,7 +67,7 @@ const items = [
     name: 'iPhone 14 pro',
     description: 'iPhone 14 release date features ]- 150GB space and 16GB Ram',
     price: 1072,
-    house: iPhone_14_pro,
+    house: iPhone14Pro,
     popularity: true,
   },
   // phone charger
@@ -76,7 +76,7 @@ const items = [
     name: 'Apple Phone charger',
     description: 'Universal apple phone charger with high capacity which store charges',
     price: 10,
-    house: apple_phone_charger,
+    house: applePhoneCharger,
     popularity: false,
   },
   // watches
@@ -85,7 +85,7 @@ const items = [
     name: 'Mini Focus Mens Watch',
     description: 'Mini Focus 0285 Mens Watch Top Brand Stainless Steel Luxury Sport Date Clock Watch Men Waterproof Quartz Watch',
     price: 500,
-    house: mini_focus_mens_watch,
+    house: miniFocusMensWatch,
     popularity: true,
   },
   {
@@ -93,7 +93,7 @@ const items = [
     name: 'Luxury Watch',
     description: '2022 Top Brand Luxury Watch Fashion Casual Military Quartz Sports Wristwatch Full Steel Waterproof',
     price: 450,
-    house: luxury_watch,
+    house: luxuryWatch,
     popularity: false,
   },
   {
@@ -101,7 +101,7 @@ const items = [
     name: 'Chronograph Quartz Watch',
     description: 'New Fashion Mens Watches Stainless Steel Top Brand Luxury Sports Chronograph Quartz Watch',
     price: 350,
-    house: chronograph_quartz_watch,
+    house: chronographQuartzWatch,
     popularity: false,
   },
   {
@@ -109,7 +109,7 @@ const items = [
     name: 'Fngeen Watch',
     description: "Fngeen Watch Brand Automatic Mesh Belt Men's Waterproof Luminous Diamond Double-sided Hollow Tourbillon",
     price: 400,
-    house: fngeen_watch,
+    house: fngeenWatch,
     popularity: true,
   },
   // chairs
@@ -118,7 +118,7 @@ const items = [
     name: 'Gaming Chair',
     description: 'Blue Whale Massage Gaming Chair with Footrest',
     price: 70,
-    house: gaming_chair,
+    house: gamingChair,
     popularity: true,
   },
   {
@@ -126,7 +126,7 @@ const items = [
     name: 'Computer Desk Chair',
     description: 'Classic Puresoft Padded Mid-Back Office Computer Desk Chair with Armrest',
     price: 86,
-    house: computer_desk_chair,
+    house: computerDeskChair,
     popularity: false,
   },
   // computer hardwares
@@ -135,7 +135,7 @@ const items = [
     name: 'Portable universal mifi',
     description: 'New portable universal mifi that can use any sim card',
     price: 50,
-    house: Wifi,
+    house: wifi,
     popularity: true,
   },
   {
@@ -143,7 +143,7 @@ const items = [
     name: 'Bag with headphone',
     description: 'Popular Bag which can be use to play music and chargerble',
     price: 70,
-    house: bag_with_headphone,
+    house: bagWithHeadphone,
     popularity: true,
   },
   {
@@ -151,7 +151,7 @@ const items = [
     name: 'Computer Mouse',
     description: 'Computer mouse which can connect using USB or bluetooth connection',
     price: 13,
-    house: computer_mouse,
+    house: computerMouse,
     popularity: false,
   },
   {
@@ -167,7 +167,7 @@ const items = [
     name: 'BENGOO Headset',
     description: 'BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One PS5 Controller, Noise Cancelling Over Ear Headphones with Mic',
     price: 17,
-    house: gaming_headset,
+    house: gamingHeadset,
     popularity: true,
   },
   // laptops
@@ -176,7 +176,7 @@ const items = [
     name: 'MacBook pro',
     description: '16GB ram, hash colour, 1TB space and high quality graphics',
     price: 1000,
-    house: MacBook,
+    house: macBook,
     popularity: true,
   },
   {
@@ -184,7 +184,7 @@ const items = [
     name: 'Lenovo Y700 14',
     description: 'Lenovo Y700 14 a Good Gaming Laptop, 16GB ram, hash colour, 500GB space and high quality graphics',
     price: 600,
-    house: lenovo_Y700,
+    house: lenovoY700,
     popularity: false,
   },
   {
@@ -192,7 +192,7 @@ const items = [
     name: 'Dell XPS 17',
     description: 'Dell XPS 17 Laptop with 10th Gen Intel Core i7 CPU',
     price: 800,
-    house: dell_xps_17,
+    house: dellXPS17,
     popularity: true,
   },
   {
@@ -200,7 +200,7 @@ const items = [
     name: 'Acer Laptop Aspire',
     description: 'Acer Laptop Aspire E1 E1-532-2635 Intel Celeron 2957U (1.40 GHz) 4 GB',
     price: 800,
-    house: acer_laptop_aspire,
+    house: acerLaptopAspire,
     popularity: false,
   },
   // digital cameras
@@ -209,7 +209,7 @@ const items = [
     name: 'Cinema Camera',
     description: 'Blackmagic Design 2.5K True Digital Cinema Camera EF with Built-In SSD',
     price: 60,
-    house: bmd_cinema_camera,
+    house: bmdCinemaCamera,
     popularity: true,
   },
   {
@@ -217,7 +217,7 @@ const items = [
     name: 'Canon Camera',
     description: 'Buy a Canon PowerShot G7 X Mark II Compact Digital Camera Black online',
     price: 500,
-    house: canon_camera,
+    house: canonCamera,
     popularity: false,
   },
   {
@@ -225,7 +225,7 @@ const items = [
     name: 'Olympus Camera',
     description: '12MP Digital Camera with 26x Wide-Angle Optical Zoom, 2.7" LCD and HDMI',
     price: 400,
-    house: olympus_camera,
+    house: olympusCamera,
     popularity: false,
   },
   // Dresses
@@ -242,7 +242,7 @@ const items = [
     name: 'Graphic Printed T-Shirt',
     description: 'CreativiT Graphic Printed T-Shirt for Unisex Everyday is a Good Day to',
     price: 10,
-    house: GP_tShirt,
+    house: gtTShirt,
     popularity: false,
   },
   // shoes
@@ -251,7 +251,7 @@ const items = [
     name: 'Spring & Autumn Shoes',
     description: 'Nice Men Shoes Spring And Autumn New Arrival Men Flats Casual Leather',
     price: 20,
-    house: spring_autumn_shoes,
+    house: springAutumnShoes,
     popularity: false,
   },
   {
@@ -259,7 +259,7 @@ const items = [
     name: 'Toe Work Shoes',
     description: "Men's Rockport Works Nice Ride Composite Toe Work Shoes, Brown",
     price: 15,
-    house: toe_work_shoes,
+    house: toeWorkShoes,
     popularity: false,
   },
   {
@@ -267,9 +267,9 @@ const items = [
     name: 'Mens canvas shoes',
     description: 'Time to source smarter! | Mens sneakers casual, Mens canvas shoes',
     price: 15,
-    house: mens_canvas_shoes,
+    house: mensCanvasShoes,
     popularity: true,
   },
 ];
 
-export { items };
+export default items;
