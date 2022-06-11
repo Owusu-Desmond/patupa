@@ -1,9 +1,6 @@
 .Item {
   border-bottom: 1px solid rgb(12, 160, 194);
   padding: 10px;
-}
-
-.Item {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr;
 }

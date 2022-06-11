@@ -13,12 +13,8 @@
       #ff1361 67%,
       #fff800 100%
     );
-  background-size: auto auto;
   background-clip: border-box;
-  background-size: 200% auto;
   color: #fff;
-  background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   font-size: 30px;
@@ -96,12 +92,10 @@ h2 {
 }
 
 .popularItem-price {
-  margin-top: 10px;
   color: #cc8e1c;
   font-size: 18px;
   font-weight: bold;
-  margin: 0 7.5%;
-  margin-bottom: 10px;
+  margin: 10px 7.5%;
 }
 
 .popularItem-button > button {
@@ -112,19 +106,21 @@ h2 {
   cursor: pointer;
   font-size: 25px;
   font-weight: 500;
-  display: none;
   height: 40px;
+  border-radius: 5px;
+}
+
+/* move button 5px bottom when clicked */
+.popularItem-button > button:active {
+  transform: translateY(5px);
+}
+
+/* slightly change the background color of the buy button when hover */
+.popularItem-button > button:hover {
+  background-color: #9c6806;
 }
 
 /* Display buy button when card onhover */
 .popularItem-card:hover > .popularItem-button > button {
   display: block;
-}
-
-.popularItem-button > button:active {
-  transform: translateY(5px);
-}
-
-.popularItem-button > button:hover {
-  background-color: #9c6806;
 }
