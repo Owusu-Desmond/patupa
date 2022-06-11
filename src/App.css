@@ -1,29 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .App {
   width: 80%;
   margin: 50px auto;
-  background-color: white;
   padding: 20px;
   border-radius: 20px;
   background-color: #f8e8e8;
   font-family: 'Poppins', sans-serif;
-
 }
+
 .App-nav {
   margin: 0;
   padding-bottom: 20px;
   border-bottom: 2px solid rgb(12, 160, 194);
 }
+
 .App-nav ul {
   margin: 0;
   padding: 0;
 }
+
 .App-nav button {
   font-size: 27px;
   background: transparent;
   border: none;
   cursor: pointer;
 }
+
 .App-nav-item {
   list-style: none;
   display: inline-block;
@@ -34,10 +37,12 @@
 .App-nav-item button:hover {
   color: rgb(113, 112, 112);
 }
+
 .App-nav-item.selected {
   border: 2px solid blue;
   border-radius: 10px;
 }
+
 .App-content {
   margin-top: 40px;
 }

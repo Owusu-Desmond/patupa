@@ -1,9 +1,9 @@
-.ItemPage-items{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+.ItemPage-items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
-.ItemPage-item{
-    margin: 20px auto;
-    
+
+.ItemPage-item {
+  margin: 20px auto;
 }
