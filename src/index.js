@@ -4,13 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-function Welcome(){
+function Welcome() {
   return <div>Welcome to my shopping app</div>;
 }
 
 ReactDOM.render(
-  <App/>,
-  document.getElementById('root')
+  <App />,
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
