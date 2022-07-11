@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Quick-Shopping-App/static/css/main.d5c1197f.css",
-    "main.js": "/Quick-Shopping-App/static/js/main.abfb7728.js",
+    "main.css": "/Quick-Shopping-App/static/css/main.bbc284cf.css",
+    "main.js": "/Quick-Shopping-App/static/js/main.1019e9b2.js",
     "static/js/787.6962f9d7.chunk.js": "/Quick-Shopping-App/static/js/787.6962f9d7.chunk.js",
     "static/media/chronograph_quartz_watch.jpg": "/Quick-Shopping-App/static/media/chronograph_quartz_watch.aaae3b2a33430a2735f9.jpg",
     "static/media/mini_focus_mens_watch.jpg": "/Quick-Shopping-App/static/media/mini_focus_mens_watch.d4dc4b95e4270d21b57e.jpg",
@@ -34,12 +34,12 @@
     "static/media/backgrrond.jpg": "/Quick-Shopping-App/static/media/backgrrond.41d08d676fbe2d6877dc.jpg",
     "static/media/T-shirt.jpg": "/Quick-Shopping-App/static/media/T-shirt.8e335439a331f018839b.jpg",
     "index.html": "/Quick-Shopping-App/index.html",
-    "main.d5c1197f.css.map": "/Quick-Shopping-App/static/css/main.d5c1197f.css.map",
-    "main.abfb7728.js.map": "/Quick-Shopping-App/static/js/main.abfb7728.js.map",
+    "main.bbc284cf.css.map": "/Quick-Shopping-App/static/css/main.bbc284cf.css.map",
+    "main.1019e9b2.js.map": "/Quick-Shopping-App/static/js/main.1019e9b2.js.map",
     "787.6962f9d7.chunk.js.map": "/Quick-Shopping-App/static/js/787.6962f9d7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5c1197f.css",
-    "static/js/main.abfb7728.js"
+    "static/css/main.bbc284cf.css",
+    "static/js/main.1019e9b2.js"
   ]
 }
