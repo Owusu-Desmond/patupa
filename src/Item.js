@@ -1,31 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Item.css';
+import './products.css';
 
+// component to return a product
 function Item({ item, children }) {
   return (
-    <div className="Item">
-      <div className="Item-left">
-        <div className="Item-image">
-          <img src={item.house} alt={item.name} />
+    /* the product container */
+    <div className="product-container">
+      <div>
+        <img className="product-image" src={item.house} alt={item.name} />
+      </div>
+      <div className="product-content">
+        <div className="product-title">
+          {item.name}
         </div>
-        <div className="Item-title-description">
-          <div className="Item-title">
-            {item.name}
-          </div>
-          <div className="Item-description">
-            {item.description}
-          </div>
+        <div className="product-description">
+          {item.description}
         </div>
+      </div>
+      <div className="product-price">
+        Price : $
+        {item.count ? item.count * item.price : item.price}
       </div>
       {children}
     </div>
-
   );
 }
-
 Item.propTypes = {
-  item: PropTypes.arrayOf.isRequired,
+  item: PropTypes.objectOf(PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    description: PropTypes.string,
+    price: PropTypes.number,
+    house: PropTypes.string,
+    popularity: PropTypes.bool,
+  })).isRequired,
   children: PropTypes.element.isRequired,
 };
 

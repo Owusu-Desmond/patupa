@@ -26,14 +26,14 @@ const App = () => {
   };
   // summarize cart to ignore already added items
   const summarizeCart = (cart) => {
-    let summaryItem;
+    let alreadySummarized;
     const groupItems = (cart) => cart.reduce((summary, item) => {
-      summaryItem = summary[item.id];
-      summaryItem = summaryItem || {
+      alreadySummarized = summary;
+      alreadySummarized[item.id] = alreadySummarized[item.id] || {
         ...item,
         count: 0,
       };
-      summaryItem.count += 1;
+      alreadySummarized[item.id].count += 1;
       return summary;
     }, {});
     return Object.values(groupItems(cart));
@@ -91,7 +91,7 @@ const Content = ({
       return (
         <span>
           {' '}
-          <HomePage popularItems={getPopularItems} />
+          <HomePage popularItems={getPopularItems} onAddToCart={onAddToCart} />
         </span>
       );
     default:
@@ -101,10 +101,24 @@ const Content = ({
   }
 };
 Content.propTypes = {
-  cart: PropTypes.arrayOf.isRequired,
+  cart: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    description: PropTypes.string,
+    price: PropTypes.number,
+    house: PropTypes.string,
+    popularity: PropTypes.bool,
+  })).isRequired,
   tab: PropTypes.string.isRequired,
   onAddToCart: PropTypes.func.isRequired,
   onRemoveItem: PropTypes.func.isRequired,
-  getPopularItems: PropTypes.func.isRequired,
+  getPopularItems: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    description: PropTypes.string,
+    price: PropTypes.number,
+    house: PropTypes.string,
+    popularity: PropTypes.bool,
+  })).isRequired,
 };
 export default App;
