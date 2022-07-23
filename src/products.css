@@ -3,16 +3,11 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, auto));
-  grid-gap: 20px;
+  grid-gap: 10px;
 }
-
 /* popular item card  */
 .product-card {
   width: 100%;
-  background-color: #d1c9c9;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
 }
 
 .product-image {
@@ -31,14 +26,12 @@
 .product-content {
   margin: 7.5%;
   margin-top: 0;
-  flex: 1;
 }
 
 .product-title {
   font-weight: 700;
   opacity: 0.9;
   line-height: 40px;
-  font-size: 20px;
   color: #3717ad;
 }
 
@@ -47,24 +40,26 @@
   line-height: 20px;
   padding-top: 10px;
 }
-
+.product-price-btn-container{
+  margin: 7.5%;
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+  justify-content: space-between;
+}
 .product-price {
   color: #cc8e1c;
   font-size: 18px;
   font-weight: bold;
-  margin: 10px 7.5%;
 }
 
 .product-button > button {
-  width: 100%;
   background-color: #cc8e1c;
-  display: none;
-  border: none;
+  display: block;
   cursor: pointer;
-  font-size: 25px;
-  font-weight: 500;
-  height: 40px;
+  font-size: 20px;
   border-radius: 5px;
+ 
 }
 
 /* move button 5px bottom when clicked */
@@ -75,9 +70,4 @@
 /* slightly change the background color of the buy button when hover */
 .product-button > button:hover {
   background-color: #9c6806;
-}
-
-/* Display buy button when card onhover */
-.product-container:hover > .product-button > button {
-  display: block;
 }
