@@ -12,7 +12,7 @@ function ItemPage({ items, onAddToCart }) {
             <Item item={item}>
               <div className="product-button">
                 <button type="button" onClick={() => onAddToCart(item)}>
-                  Add to cart
+                  Buy
                 </button>
               </div>
             </Item>
