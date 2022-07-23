@@ -18,11 +18,13 @@ function Item({ item, children }) {
           {item.description}
         </div>
       </div>
-      <div className="product-price">
-        Price : $
-        {item.count ? item.count * item.price : item.price}
+      <div className="product-price-btn-container">
+        <div className="product-price">
+          Price : $
+          {item.count ? item.count * item.price : item.price}
+        </div>
+        {children}
       </div>
-      {children}
     </div>
   );
 }
