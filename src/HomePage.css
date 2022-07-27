@@ -39,6 +39,5 @@
 }
 
 h2 {
-  color: #3717ad;
+  color: var(--secondary-color);
 }
-

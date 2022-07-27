@@ -5,6 +5,7 @@
   grid-template-columns: repeat(auto-fit, minmax(230px, auto));
   grid-gap: 10px;
 }
+
 /* popular item card  */
 .product-card {
   width: 100%;
@@ -32,7 +33,7 @@
   font-weight: 700;
   opacity: 0.9;
   line-height: 40px;
-  color: #3717ad;
+  color: var(--secondary-color);
 }
 
 .product-description {
@@ -40,26 +41,27 @@
   line-height: 20px;
   padding-top: 10px;
 }
-.product-price-btn-container{
-  margin: 7.5%;
+
+.product-price-btn-container {
   display: flex;
   gap: 20px;
+  margin-top: 15px;
   align-items: baseline;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
+
 .product-price {
-  color: #cc8e1c;
+  color: var(--primary-color);
   font-size: 18px;
   font-weight: bold;
 }
 
 .product-button > button {
-  background-color: #cc8e1c;
-  display: block;
+  background-color: var(--primary-color);
   cursor: pointer;
   font-size: 20px;
   border-radius: 5px;
- 
 }
 
 /* move button 5px bottom when clicked */
@@ -70,4 +72,10 @@
 /* slightly change the background color of the buy button when hover */
 .product-button > button:hover {
   background-color: #9c6806;
+}
+
+@media screen and (max-width: 678px) {
+  .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  }
 }

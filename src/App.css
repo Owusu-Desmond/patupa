@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.App {
-  width: 80%;
-  margin: 50px auto;
-  padding: 20px;
-  border-radius: 20px;
+* {
+  margin: 0;
+}
+
+:root {
+  --primary-color: #cc8e1c;
+  --secondary-color: #3717ad;
+}
+
+body {
   background-color: #f8e8e8;
   font-family: 'Poppins', sans-serif;
 }
 
+.App {
+  border-radius: 20px;
+}
+
 .App-nav {
-  margin: 0;
-  padding-bottom: 20px;
-  border-bottom: 2px solid rgb(12, 160, 194);
+  padding: 10px;
+  background-color: var(--primary-color);
 }
 
 .App-nav ul {
@@ -21,8 +29,10 @@
 }
 
 .App-nav button {
-  font-size: 27px;
+  font-size: 25px;
+  font-weight: 700;
   background: transparent;
+  color: rgb(75, 75, 78);
   border: none;
   cursor: pointer;
 }
@@ -30,19 +40,29 @@
 .App-nav-item {
   list-style: none;
   display: inline-block;
-  margin-right: 40px;
-  border-bottom: 3px solid transparent;
+  margin-right: 5%;
 }
 
 .App-nav-item button:hover {
-  color: rgb(113, 112, 112);
+  color: #706767;
 }
 
-.App-nav-item.selected {
-  border: 2px solid blue;
-  border-radius: 10px;
+.App-nav-item.selected button {
+  border: 3px solid #0ca0c2;
+  border-radius: 5px;
+  color: #f8e8e8;
 }
 
 .App-content {
-  margin-top: 40px;
+  margin: 40px 20px;
+}
+
+@media screen and (max-width: 678px) {
+  .App-nav button {
+    font-size: 22px;
+  }
+  
+  .App-nav-item {
+    margin-right: 2%;
+  }
 }
