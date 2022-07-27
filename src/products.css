@@ -1,14 +1,16 @@
 /* products-container */
 .products-container {
-  width: 100%;
+  width: 95%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, auto));
   grid-gap: 10px;
+  margin: 40px 2.5%;
 }
 
 /* popular item card  */
 .product-card {
   width: 100%;
+  background-color: white;
 }
 
 .product-image {

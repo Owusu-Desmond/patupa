@@ -1,43 +1,19 @@
-.Home-container {
+.home-container {
   display: block;
 }
 
-.Animate-welcome {
-  text-align: center;
-  text-transform: uppercase;
-  background-image:
-    linear-gradient(
-      -225deg,
-      #231557 0%,
-      #44107a 29%,
-      #ff1361 67%,
-      #fff800 100%
-    );
-  background-clip: border-box;
-  color: #fff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
-  font-size: 30px;
-}
-
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
-
-.Home-image {
+.home-image {
   width: 100%;
 }
 
-.Home-description {
+.home-description {
   font-size: 20px;
+  font-weight: 500;
   text-align: center;
-  word-spacing: 10px;
   font-style: italic;
 }
 
 h2 {
   color: var(--secondary-color);
+  margin-left: 20px;
 }

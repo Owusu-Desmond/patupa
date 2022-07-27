@@ -53,10 +53,6 @@ body {
   color: #f8e8e8;
 }
 
-.App-content {
-  margin: 40px 20px;
-}
-
 @media screen and (max-width: 678px) {
   .App-nav button {
     font-size: 22px;
