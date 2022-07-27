@@ -1,45 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import welcomeImage from './images/shopping-welcome.jpg';
+import Item from './Item';
+import welcomeImage from './images/shopping-welcome3.jpg';
 import './HomePage.css';
+import './products.css';
 
-function HomePage({ popularItems }) {
+function HomePage({ popularItems, onAddToCart }) {
   return (
-    <div className="Home-container">
-      <h1 className="Animate-welcome">Hello, welcome to PaTuPa shopping</h1>
-      <img src={welcomeImage} alt="shopping welcome" className="Home-image" />
-      <p className="Home-description">Buy good`&apos`s from PaTuPa shopping for free of charge (No tax)</p>
+    <div className="home-container">
+      <img src={welcomeImage} alt="shopping welcome" className="home-image" />
+      <p className="home-description">Buy products from PaTuPa shopping for free of charge.</p>
       <h2>Popular Items</h2>
-      <div className="popularItems-container">
+      <div className="products-container">
         {
-                    popularItems.map((item) => (
-                      <div key={item.id} className="popularItem-card">
-                        <div>
-                          <img className="popularItem-image" src={item.house} alt={item.name} />
-                        </div>
-                        <div className="popularItem-content">
-                          <div className="popularItem-title">
-                            {item.name}
-                          </div>
-                          <div className="popularItem-description">
-                            {item.description}
-                          </div>
-                        </div>
-                        <div className="popularItem-price">
-                          Price : $
-                          {item.price}
-                        </div>
-                        <div className="popularItem-button">
-                          <button type="button">BUY</button>
-                        </div>
-                      </div>
-                    ))
-                }
+          popularItems.map((item) => (
+            <div key={item.id} className="product-card">
+              <Item item={item}>
+                <div className="product-button">
+                  <button type="button" onClick={() => onAddToCart(item)}>
+                    Buy
+                  </button>
+                </div>
+              </Item>
+            </div>
+          ))
+        }
       </div>
     </div>
   );
 }
 HomePage.propTypes = {
-  popularItems: PropTypes.arrayOf.isRequired,
+  popularItems: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    description: PropTypes.string,
+    price: PropTypes.number,
+    house: PropTypes.string,
+    popularity: PropTypes.bool,
+  })).isRequired,
+  onAddToCart: PropTypes.func.isRequired,
 };
 export default HomePage;

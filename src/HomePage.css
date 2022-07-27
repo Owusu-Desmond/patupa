@@ -1,127 +1,19 @@
-.Home-container {
+.home-container {
   display: block;
 }
 
-.Animate-welcome {
-  text-align: center;
-  text-transform: uppercase;
-  background-image:
-    linear-gradient(
-      -225deg,
-      #231557 0%,
-      #44107a 29%,
-      #ff1361 67%,
-      #fff800 100%
-    );
-  background-clip: border-box;
-  color: #fff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
-  font-size: 30px;
-}
-
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
-
-.Home-image {
+.home-image {
   width: 100%;
 }
 
-.Home-description {
+.home-description {
   font-size: 20px;
+  font-weight: 500;
   text-align: center;
-  word-spacing: 10px;
   font-style: italic;
 }
 
 h2 {
-  color: #3717ad;
-}
-
-/* popularItems-container */
-.popularItems-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, auto));
-  grid-gap: 20px;
-}
-
-/* popular item card  */
-.popularItem-card {
-  width: 100%;
-  background-color: #d1c9c9;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.popularItem-image {
-  width: 85%;
-  margin: 7.5%;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.7s;
-}
-
-.popularItem-image:hover {
-  width: 94%;
-  margin: 3%;
-}
-
-.popularItem-content {
-  margin: 7.5%;
-  margin-top: 0;
-  flex: 1;
-}
-
-.popularItem-title {
-  font-weight: 700;
-  opacity: 0.9;
-  line-height: 40px;
-  font-size: 20px;
-  color: #3717ad;
-}
-
-.popularItem-description {
-  word-spacing: 7px;
-  line-height: 20px;
-  padding-top: 10px;
-}
-
-.popularItem-price {
-  color: #cc8e1c;
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 7.5%;
-}
-
-.popularItem-button > button {
-  width: 100%;
-  background-color: #cc8e1c;
-  display: none;
-  border: none;
-  cursor: pointer;
-  font-size: 25px;
-  font-weight: 500;
-  height: 40px;
-  border-radius: 5px;
-}
-
-/* move button 5px bottom when clicked */
-.popularItem-button > button:active {
-  transform: translateY(5px);
-}
-
-/* slightly change the background color of the buy button when hover */
-.popularItem-button > button:hover {
-  background-color: #9c6806;
-}
-
-/* Display buy button when card onhover */
-.popularItem-card:hover > .popularItem-button > button {
-  display: block;
+  color: var(--secondary-color);
+  margin-left: 20px;
 }

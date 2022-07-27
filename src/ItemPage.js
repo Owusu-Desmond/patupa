@@ -1,39 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ItemPage.css';
+import './products.css';
 import Item from './Item';
 
 function ItemPage({ items, onAddToCart }) {
   return (
-    <ul className="ItemPage-items">
+    <div className="products-container">
       {
-                items.map((item) => (
-                  <li key={item.id} className="ItemPage-item">
-                    <Item item={item}>
-                      <div className="Item-right">
-                        <div className="Item-price">
-                          <div>
-                            $
-                            {item.price}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="Item-right">
-                        <button type="button" className="Item-button" onClick={() => onAddToCart(item)}>
-                          Add to cart
-                        </button>
-                      </div>
-                    </Item>
-
-                  </li>
-                ))
-            }
-    </ul>
+        items.map((item) => (
+          <div key={item.id} className="product-card">
+            <Item item={item}>
+              <div className="product-button">
+                <button type="button" onClick={() => onAddToCart(item)}>
+                  Buy
+                </button>
+              </div>
+            </Item>
+          </div>
+        ))
+      }
+    </div>
   );
 }
 
 ItemPage.propTypes = {
-  items: PropTypes.arrayOf.isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    description: PropTypes.string,
+    price: PropTypes.number,
+    house: PropTypes.string,
+    popularity: PropTypes.bool,
+  })).isRequired,
   onAddToCart: PropTypes.func.isRequired,
 };
 
