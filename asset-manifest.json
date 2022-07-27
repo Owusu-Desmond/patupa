@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/Quick-Shopping-App/static/css/main.bbc284cf.css",
-    "main.js": "/Quick-Shopping-App/static/js/main.1019e9b2.js",
+    "main.css": "/Quick-Shopping-App/static/css/main.15f3dc4b.css",
+    "main.js": "/Quick-Shopping-App/static/js/main.10353760.js",
     "static/js/787.6962f9d7.chunk.js": "/Quick-Shopping-App/static/js/787.6962f9d7.chunk.js",
-    "static/media/chronograph_quartz_watch.jpg": "/Quick-Shopping-App/static/media/chronograph_quartz_watch.aaae3b2a33430a2735f9.jpg",
     "static/media/mini_focus_mens_watch.jpg": "/Quick-Shopping-App/static/media/mini_focus_mens_watch.d4dc4b95e4270d21b57e.jpg",
-    "static/media/shopping-welcome.jpg": "/Quick-Shopping-App/static/media/shopping-welcome.81fd8363a5b9aade84f9.jpg",
     "static/media/iPhone_14_pro.png": "/Quick-Shopping-App/static/media/iPhone_14_pro.c4462ad7df0aec2bbb47.png",
+    "static/media/chronograph_quartz_watch.jpg": "/Quick-Shopping-App/static/media/chronograph_quartz_watch.c7a28e6b367f434d260f.jpg",
+    "static/media/shopping-welcome3.jpg": "/Quick-Shopping-App/static/media/shopping-welcome3.c7d46be703f568cfb383.jpg",
     "static/media/mens_canvas_shoes.jpg": "/Quick-Shopping-App/static/media/mens_canvas_shoes.45d584f77e3c05307cb9.jpg",
     "static/media/luxury_watch.jpg": "/Quick-Shopping-App/static/media/luxury_watch.2f943a9353a440406cb5.jpg",
     "static/media/MacBook.jpg": "/Quick-Shopping-App/static/media/MacBook.c520d2c89de253ea04a2.jpg",
@@ -31,15 +31,14 @@
     "static/media/Ipad.jpg": "/Quick-Shopping-App/static/media/Ipad.bdbaaa6c9f8093fc48e3.jpg",
     "static/media/fngeen_watch.jpg": "/Quick-Shopping-App/static/media/fngeen_watch.f2b228ead467c7c01545.jpg",
     "static/media/apple_phone_charger.jpg": "/Quick-Shopping-App/static/media/apple_phone_charger.7824511e13ccfc58576f.jpg",
-    "static/media/backgrrond.jpg": "/Quick-Shopping-App/static/media/backgrrond.41d08d676fbe2d6877dc.jpg",
     "static/media/T-shirt.jpg": "/Quick-Shopping-App/static/media/T-shirt.8e335439a331f018839b.jpg",
     "index.html": "/Quick-Shopping-App/index.html",
-    "main.bbc284cf.css.map": "/Quick-Shopping-App/static/css/main.bbc284cf.css.map",
-    "main.1019e9b2.js.map": "/Quick-Shopping-App/static/js/main.1019e9b2.js.map",
+    "main.15f3dc4b.css.map": "/Quick-Shopping-App/static/css/main.15f3dc4b.css.map",
+    "main.10353760.js.map": "/Quick-Shopping-App/static/js/main.10353760.js.map",
     "787.6962f9d7.chunk.js.map": "/Quick-Shopping-App/static/js/787.6962f9d7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbc284cf.css",
-    "static/js/main.1019e9b2.js"
+    "static/css/main.15f3dc4b.css",
+    "static/js/main.10353760.js"
   ]
 }
