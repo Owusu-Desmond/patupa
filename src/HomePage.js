@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Item from './Item';
-import welcomeImage from './images/shopping-welcome.jpg';
+import welcomeImage from './images/shopping-welcome3.jpg';
 import './HomePage.css';
 import './products.css';
 
 function HomePage({ popularItems, onAddToCart }) {
   return (
-    <div className="Home-container">
-      <h1 className="Animate-welcome">Hello, welcome to PaTuPa shopping</h1>
-      <img src={welcomeImage} alt="shopping welcome" className="Home-image" />
-      <p className="Home-description">Buy good`&apos`s from PaTuPa shopping for free of charge (No tax)</p>
+    <div className="home-container">
+      <img src={welcomeImage} alt="shopping welcome" className="home-image" />
+      <p className="home-description">Buy products from PaTuPa shopping for free of charge.</p>
       <h2>Popular Items</h2>
       <div className="products-container">
         {
