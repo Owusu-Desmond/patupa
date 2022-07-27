@@ -6,7 +6,7 @@ import './products.css';
 function Item({ item, children }) {
   return (
     /* the product container */
-    <div className="product-container">
+    <div className={(item.count ? 'cart-product-container' : 'product-container')}>
       <div>
         <img className="product-image" src={item.house} alt={item.name} />
       </div>
@@ -17,13 +17,13 @@ function Item({ item, children }) {
         <div className="product-description">
           {item.description}
         </div>
-      </div>
-      <div className="product-price-btn-container">
-        <div className="product-price">
-          Price : $
-          {item.count ? item.count * item.price : item.price}
+        <div className="product-price-btn-container">
+          <div className="product-price">
+            Price : $
+            {item.count ? item.count * item.price : item.price}
+          </div>
+          {children}
         </div>
-        {children}
       </div>
     </div>
   );
