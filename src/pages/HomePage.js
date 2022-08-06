@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Item from './Item';
-import welcomeImage from './images/shopping-welcome3.jpg';
-import './HomePage.css';
-import './products.css';
+import Item from '../components/Product';
+import welcomeImage from '../images/shopping-welcome2.jpg';
+import '../css/HomePage.css';
+import '../css/products.css';
 
 function HomePage({ popularItems, onAddToCart }) {
   return (

@@ -14,13 +14,17 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.App {
-  border-radius: 20px;
+.App-nav {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px;
+  top: 0;
+  background-color: var(--primary-color);
 }
 
-.App-nav {
-  padding: 10px;
-  background-color: var(--primary-color);
+.App-content {
+  margin-top: 90px;
 }
 
 .App-nav ul {
@@ -30,9 +34,8 @@ body {
 
 .App-nav button {
   font-size: 25px;
-  font-weight: 700;
   background: transparent;
-  color: rgb(75, 75, 78);
+  color: black;
   border: none;
   cursor: pointer;
 }
@@ -55,7 +58,7 @@ body {
 
 @media screen and (max-width: 678px) {
   .App-nav button {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .App-nav-item {

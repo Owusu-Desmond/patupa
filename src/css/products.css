@@ -2,8 +2,8 @@
 .products-container {
   width: 95%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, auto));
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  grid-gap: 20px;
   margin: 40px 2.5%;
 }
 
@@ -33,7 +33,6 @@
 
 .product-title {
   font-weight: 700;
-  opacity: 0.9;
   line-height: 40px;
   color: var(--secondary-color);
 }
@@ -78,6 +77,9 @@
 
 @media screen and (max-width: 678px) {
   .products-container {
-    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    width: 90%;
+    grid-gap: 10px;
+    margin: 40px 5%;
   }
 }
