@@ -1,6 +1,6 @@
-# Quick Shopping App
+# Patupa Shopping App
 
-> This project is a simple and quick shopping application built with React JS javascript library where a user can buy product without any tax.
+> Patupa is a a simple and fast shopping application that helps users can purchase online with no cost and short time of delivery.
 
 ## Build With
 
