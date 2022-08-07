@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css/App.css';
 
-const Nav = ({ activeTab, onTabChange }) => {
+const Nav = ({ activeTab, onTabChange, productsInCart }) => {
   const tabClass = (tabName) => `App-nav-item ${(activeTab === tabName) ? 'selected' : ''
   }`;
   return (
@@ -15,7 +15,10 @@ const Nav = ({ activeTab, onTabChange }) => {
           <button type="button" onClick={() => onTabChange('products')}>Products</button>
         </li>
         <li className={tabClass('cart')}>
-          <button type="button" onClick={() => onTabChange('cart')}>Cart</button>
+          <button type="button" onClick={() => onTabChange('cart')}>
+            &#128722;
+            <sup>{productsInCart}</sup>
+          </button>
         </li>
       </ul>
     </nav>
@@ -25,6 +28,7 @@ const Nav = ({ activeTab, onTabChange }) => {
 Nav.propTypes = {
   activeTab: PropTypes.string.isRequired,
   onTabChange: PropTypes.func.isRequired,
+  productsInCart: PropTypes.number.isRequired,
 };
 
 export default Nav;
