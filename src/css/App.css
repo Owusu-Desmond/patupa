@@ -23,6 +23,14 @@ body {
   background-color: var(--primary-color);
 }
 
+.App-nav sup {
+  color: var(--secondary-color);
+  border-radius: 50%;
+
+  /* font-family: Impact; */
+  font-weight: 700;
+}
+
 .App-content {
   margin-top: 90px;
 }
