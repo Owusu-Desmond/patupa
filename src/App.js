@@ -3,6 +3,7 @@ import products from './adapters/static-data';
 import Nav from './components/AppNav';
 import './css/App.css';
 import Content from './components/AppContent';
+import Footer from './components/footer';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -36,6 +37,7 @@ const App = () => {
 
     return Object.values(groupItems(cart));
   };
+  const productsInCart = summarizeCart(cart).length;
   // get popular items and display in the homepage
   const popularItems = (items) => {
     const popItems = [];
@@ -51,6 +53,7 @@ const App = () => {
       <Nav
         activeTab={activeTab}
         onTabChange={setActiveTab}
+        productsInCart={productsInCart}
       />
       <main className="App-content">
         <Content
@@ -61,6 +64,7 @@ const App = () => {
           getPopularItems={popularItems(products)}
         />
       </main>
+      <Footer />
     </div>
   );
 };
