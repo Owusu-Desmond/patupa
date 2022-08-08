@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './products.css';
+import '../css/products.css';
 
 // component to return a product
-function Item({ item, children }) {
+function Item({ item, children, suggested }) {
   return (
     /* the product container */
-    <div className={(item.count ? 'cart-product-container' : 'product-container')}>
+    <div className={(item.count || suggested ? 'cart-product-container' : 'product-container')}>
       <div>
         <img className="product-image" src={item.house} alt={item.name} />
       </div>
@@ -28,6 +28,11 @@ function Item({ item, children }) {
     </div>
   );
 }
+
+Item.defaultProps = {
+  suggested: false,
+};
+
 Item.propTypes = {
   item: PropTypes.objectOf(PropTypes.shape({
     id: PropTypes.string,
@@ -38,6 +43,7 @@ Item.propTypes = {
     popularity: PropTypes.bool,
   })).isRequired,
   children: PropTypes.element.isRequired,
+  suggested: PropTypes.bool,
 };
 
 export default Item;

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './products.css';
-import Item from './Item';
+import '../css/products.css';
+import Item from '../components/Product';
 
-function ItemPage({ items, onAddToCart }) {
+function productsPage({ items, onAddToCart }) {
   return (
     <div className="products-container">
       {
@@ -23,7 +23,7 @@ function ItemPage({ items, onAddToCart }) {
   );
 }
 
-ItemPage.propTypes = {
+productsPage.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     name: PropTypes.string,
@@ -35,4 +35,4 @@ ItemPage.propTypes = {
   onAddToCart: PropTypes.func.isRequired,
 };
 
-export default ItemPage;
+export default productsPage;

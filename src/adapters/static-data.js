@@ -1,40 +1,40 @@
 import uuid from 'react-uuid';
 // import mobile phones
-import huaweiY7a from './images/items/huawei_Y7a.jpg';
-import tcl10Plus from './images/items/TCL_10_Plus.jpg';
-import ipad from './images/items/Ipad.jpg';
-import iPhone14Pro from './images/items/iPhone_14_pro.png';
+import huaweiY7a from '../images/items/huawei_Y7a.jpg';
+import tcl10Plus from '../images/items/TCL_10_Plus.jpg';
+import ipad from '../images/items/Ipad.jpg';
+import iPhone14Pro from '../images/items/iPhone_14_pro.png';
 // import shelters
-import gtTShirt from './images/items/GP_tShirt.jpg';
-import tShirt from './images/items/T-shirt.jpg';
+import gtTShirt from '../images/items/GP_tShirt.jpg';
+import tShirt from '../images/items/T-shirt.jpg';
 // import computer hardwares
-import gamingHeadset from './images/items/gaming_headset.jpg';
-import wifi from './images/items/universal-wifi.jpg';
-import headphone from './images/items/headphone.jpg';
-import applePhoneCharger from './images/items/apple_phone_charger.jpg';
-import bagWithHeadphone from './images/items/bag_with_headphone.jpg';
-import computerMouse from './images/items/computer_mouse.jpg';
+import gamingHeadset from '../images/items/gaming_headset.jpg';
+import wifi from '../images/items/universal-wifi.jpg';
+import headphone from '../images/items/headphone.jpg';
+import applePhoneCharger from '../images/items/apple_phone_charger.jpg';
+import bagWithHeadphone from '../images/items/bag_with_headphone.jpg';
+import computerMouse from '../images/items/computer_mouse.jpg';
 // import laptops
-import lenovoY700 from './images/items/lenovo_Y700.png';
-import dellXPS17 from './images/items/dell_xps_17.jpg';
-import macBook from './images/items/MacBook.jpg';
-import acerLaptopAspire from './images/items/acer_laptop_aspire.jpg';
+import lenovoY700 from '../images/items/lenovo_Y700.png';
+import dellXPS17 from '../images/items/dell_xps_17.jpg';
+import macBook from '../images/items/MacBook.jpg';
+import acerLaptopAspire from '../images/items/acer_laptop_aspire.jpg';
 // import chairs
-import computerDeskChair from './images/items/computer_desk_chair.jpg';
-import gamingChair from './images/items/gaming_chair.jpg';
+import computerDeskChair from '../images/items/computer_desk_chair.jpg';
+import gamingChair from '../images/items/gaming_chair.jpg';
 // import shoes
-import mensCanvasShoes from './images/items/mens_canvas_shoes.jpg';
-import toeWorkShoes from './images/items/toe_work_shoes.jpg';
-import springAutumnShoes from './images/items/spring_autumn_shoes.jpg';
+import mensCanvasShoes from '../images/items/mens_canvas_shoes.jpg';
+import toeWorkShoes from '../images/items/toe_work_shoes.jpg';
+import springAutumnShoes from '../images/items/spring_autumn_shoes.jpg';
 // import digital cameras
-import bmdCinemaCamera from './images/items/bmd_cinema_camera.jpg';
-import canonCamera from './images/items/canon_camera.jpg';
-import olympusCamera from './images/items/olympus_camera.jpg';
+import bmdCinemaCamera from '../images/items/bmd_cinema_camera.jpg';
+import canonCamera from '../images/items/canon_camera.jpg';
+import olympusCamera from '../images/items/olympus_camera.jpg';
 // watches
-import miniFocusMensWatch from './images/items/mini_focus_mens_watch.jpg';
-import luxuryWatch from './images/items/luxury_watch.jpg';
-import fngeenWatch from './images/items/fngeen_watch.jpg';
-import chronographQuartzWatch from './images/items/chronograph_quartz_watch.jpg';
+import miniFocusMensWatch from '../images/items/mini_focus_mens_watch.jpg';
+import luxuryWatch from '../images/items/luxury_watch.jpg';
+import fngeenWatch from '../images/items/fngeen_watch.jpg';
+import chronographQuartzWatch from '../images/items/chronograph_quartz_watch.jpg';
 
 const items = [
   // mobile phones

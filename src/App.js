@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import items from './static-data';
-import Nav from './Nav';
-import HomePage from './HomePage';
-import ItemPage from './ItemPage';
-import CartPage from './CartPage';
-import './App.css';
+import products from './adapters/static-data';
+import Nav from './components/AppNav';
+import './css/App.css';
+import Content from './components/AppContent';
+import Footer from './components/footer';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -36,8 +34,10 @@ const App = () => {
       alreadySummarized[item.id].count += 1;
       return summary;
     }, {});
+
     return Object.values(groupItems(cart));
   };
+  const productsInCart = summarizeCart(cart).length;
   // get popular items and display in the homepage
   const popularItems = (items) => {
     const popItems = [];
@@ -53,72 +53,20 @@ const App = () => {
       <Nav
         activeTab={activeTab}
         onTabChange={setActiveTab}
+        productsInCart={productsInCart}
       />
       <main className="App-content">
         <Content
           tab={activeTab}
-          onAddToCart={addToCart}
-          onRemoveItem={removeItem}
+          addToCart={addToCart}
+          removeOne={removeItem}
           cart={summarizeCart(cart)}
-          getPopularItems={popularItems(items)}
+          getPopularItems={popularItems(products)}
         />
       </main>
+      <Footer />
     </div>
   );
 };
 
-// switch app content to components
-const Content = ({
-  cart, tab, onAddToCart, onRemoveItem, getPopularItems,
-}) => {
-  switch (tab) {
-    case 'items':
-      return (
-        <span>
-          {' '}
-          <ItemPage items={items} onAddToCart={onAddToCart} />
-        </span>
-      );
-    case 'cart':
-      return (
-        <span>
-          {' '}
-          <CartPage items={cart} onRemoveOne={onRemoveItem} onAddOne={onAddToCart} />
-          {' '}
-        </span>
-      );
-    case 'home':
-      return (
-        <span>
-          {' '}
-          <HomePage popularItems={getPopularItems} onAddToCart={onAddToCart} />
-        </span>
-      );
-    default:
-      return (
-        <span>Ops! You are missed.</span>
-      );
-  }
-};
-Content.propTypes = {
-  cart: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    description: PropTypes.string,
-    price: PropTypes.number,
-    house: PropTypes.string,
-    popularity: PropTypes.bool,
-  })).isRequired,
-  tab: PropTypes.string.isRequired,
-  onAddToCart: PropTypes.func.isRequired,
-  onRemoveItem: PropTypes.func.isRequired,
-  getPopularItems: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    description: PropTypes.string,
-    price: PropTypes.number,
-    house: PropTypes.string,
-    popularity: PropTypes.bool,
-  })).isRequired,
-};
 export default App;

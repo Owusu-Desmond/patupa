@@ -1,6 +1,6 @@
-# Quick Shopping App
+# Patupa
 
-> This project is a simple and quick shopping application built with React JS javascript library where a user can buy product without any tax.
+> Patupa is a a simple and fast shopping application that helps users can purchase online with no cost and short time of delivery.
 
 ## Build With
 
@@ -13,7 +13,7 @@
  
 ## Live Demo
 
-[Live Demo link](http://owusu-desmond.github.io/Quick-Shopping-App)
+[Live Demo link](http://owusu-desmond.github.io/patupa)
 
 ## Getting Started
 
@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple example steps.
 Clone this repo locally using git in the command line and the following command
 
 ```
-git clone https://github.com/Owusu-Desmond/portfolio.git
+git clone https://github.com/Owusu-Desmond/patupa.git
 ```
 
 Alternatively, you can just download the complete zip file and extract the folder in your directory
@@ -81,12 +81,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - Github [@Owusu-Desmond](https://github.com/Owusu-Desmond)
 - Twitter [@DesmondOwusuDev](https://twitter.com/DesmondOwusuDev)
 - LinkedIn [@desmond-owusu-ansah](https://www.linkedin.com/in/desmond-owusu-ansah-09274a223/)
+- Dev [@desmondowusudev](https://dev.to/desmondowusudev)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Owusu-Desmond/patupa/issues/).
 
 ## Show your support
 
