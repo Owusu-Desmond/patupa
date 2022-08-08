@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Quick-Shopping-App/static/css/main.15f3dc4b.css",
-    "main.js": "/Quick-Shopping-App/static/js/main.10353760.js",
-    "static/js/787.6962f9d7.chunk.js": "/Quick-Shopping-App/static/js/787.6962f9d7.chunk.js",
+    "main.css": "/Quick-Shopping-App/static/css/main.49b74f51.css",
+    "main.js": "/Quick-Shopping-App/static/js/main.d4e764a7.js",
+    "static/js/787.bb08154b.chunk.js": "/Quick-Shopping-App/static/js/787.bb08154b.chunk.js",
     "static/media/mini_focus_mens_watch.jpg": "/Quick-Shopping-App/static/media/mini_focus_mens_watch.d4dc4b95e4270d21b57e.jpg",
     "static/media/iPhone_14_pro.png": "/Quick-Shopping-App/static/media/iPhone_14_pro.c4462ad7df0aec2bbb47.png",
     "static/media/chronograph_quartz_watch.jpg": "/Quick-Shopping-App/static/media/chronograph_quartz_watch.c7a28e6b367f434d260f.jpg",
-    "static/media/shopping-welcome3.jpg": "/Quick-Shopping-App/static/media/shopping-welcome3.c7d46be703f568cfb383.jpg",
     "static/media/mens_canvas_shoes.jpg": "/Quick-Shopping-App/static/media/mens_canvas_shoes.45d584f77e3c05307cb9.jpg",
     "static/media/luxury_watch.jpg": "/Quick-Shopping-App/static/media/luxury_watch.2f943a9353a440406cb5.jpg",
+    "static/media/shopping-welcome2.jpg": "/Quick-Shopping-App/static/media/shopping-welcome2.bca4e892236a9016c2a7.jpg",
     "static/media/MacBook.jpg": "/Quick-Shopping-App/static/media/MacBook.c520d2c89de253ea04a2.jpg",
     "static/media/gaming_headset.jpg": "/Quick-Shopping-App/static/media/gaming_headset.9a0190f747d76b59339a.jpg",
     "static/media/TCL_10_Plus.jpg": "/Quick-Shopping-App/static/media/TCL_10_Plus.a8fb5e4e713db99a103a.jpg",
@@ -24,6 +24,7 @@
     "static/media/bag_with_headphone.jpg": "/Quick-Shopping-App/static/media/bag_with_headphone.08e4c349dc9a9da37629.jpg",
     "static/media/universal-wifi.jpg": "/Quick-Shopping-App/static/media/universal-wifi.705a222232838b4524b6.jpg",
     "static/media/computer_desk_chair.jpg": "/Quick-Shopping-App/static/media/computer_desk_chair.ada2dc86e3f204b0adee.jpg",
+    "static/media/empty-shopping-cart.jpg": "/Quick-Shopping-App/static/media/empty-shopping-cart.cef1b001818b23f3eb7a.jpg",
     "static/media/computer_mouse.jpg": "/Quick-Shopping-App/static/media/computer_mouse.917c4a533f49fd8e9f8e.jpg",
     "static/media/dell_xps_17.jpg": "/Quick-Shopping-App/static/media/dell_xps_17.b5a5681333bbc2b3d41a.jpg",
     "static/media/gaming_chair.jpg": "/Quick-Shopping-App/static/media/gaming_chair.4c7cced8320f65cf3144.jpg",
@@ -33,12 +34,12 @@
     "static/media/apple_phone_charger.jpg": "/Quick-Shopping-App/static/media/apple_phone_charger.7824511e13ccfc58576f.jpg",
     "static/media/T-shirt.jpg": "/Quick-Shopping-App/static/media/T-shirt.8e335439a331f018839b.jpg",
     "index.html": "/Quick-Shopping-App/index.html",
-    "main.15f3dc4b.css.map": "/Quick-Shopping-App/static/css/main.15f3dc4b.css.map",
-    "main.10353760.js.map": "/Quick-Shopping-App/static/js/main.10353760.js.map",
-    "787.6962f9d7.chunk.js.map": "/Quick-Shopping-App/static/js/787.6962f9d7.chunk.js.map"
+    "main.49b74f51.css.map": "/Quick-Shopping-App/static/css/main.49b74f51.css.map",
+    "main.d4e764a7.js.map": "/Quick-Shopping-App/static/js/main.d4e764a7.js.map",
+    "787.bb08154b.chunk.js.map": "/Quick-Shopping-App/static/js/787.bb08154b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15f3dc4b.css",
-    "static/js/main.10353760.js"
+    "static/css/main.49b74f51.css",
+    "static/js/main.d4e764a7.js"
   ]
 }
