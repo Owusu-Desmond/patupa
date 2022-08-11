@@ -10,10 +10,16 @@
   - [x] HTML
   - [x] CSS
   - [x] JavaScript
- 
+  
+## Screenshot 
+
+
+https://user-images.githubusercontent.com/92303891/184237104-54deb4ac-45cd-491d-9656-aefc68d35850.mp4
+
+
 ## Live Demo
 
-[Live Demo link](http://owusu-desmond.github.io/patupa)
+Access the online version of this app [Live link](https://patupa.herokuapp.com/)
 
 ## Getting Started
 
