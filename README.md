@@ -13,7 +13,7 @@
  
 ## Live Demo
 
-[Live Demo link](http://owusu-desmond.github.io/patupa)
+[Live Demo link](https://patupa.herokuapp.com/)
 
 ## Getting Started
 

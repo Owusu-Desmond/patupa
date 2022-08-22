@@ -61,6 +61,8 @@ const App = () => {
             <Route path="/" element={<HomePage popularItems={popularItems(products)} onAddToCart={addToCart} />} />
             <Route path="/products" element={<ProductsPage items={products} onAddToCart={addToCart} />} />
             <Route path="/cart" element={<CartPage cartItems={summarizeCart(cart)} onRemoveOne={removeOne} onAddOne={addToCart} onAddToCart={addToCart} />} />
+            <Route path="/about" element={<h2>About</h2>} />
+            <Route path="/account" element={<h2>My account</h2>} />
           </Routes>
         </main>
         <Footer />

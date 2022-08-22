@@ -9,49 +9,66 @@
   --secondary-color: #3717ad;
 }
 
+a{
+  text-decoration: none;
+}
+
 body {
   background-color: #f8e8e8;
   font-family: 'Poppins', sans-serif;
 }
 
-.App-nav {
+nav {
   position: fixed;
   overflow: hidden;
-  width: 100%;
+  width: 96%;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 2%;
   top: 0;
+  align-items: center;
   background-color: var(--primary-color);
 }
 
-.App-nav sup {
-  color: var(--secondary-color);
-  border-radius: 50%;
-
-  /* font-family: Impact; */
-  font-weight: 700;
+.active {
+  color: #f8e8e8;
+  border-bottom: 3px solid #f8e8e8;
+}
+.logo {
+  width: 80px;
 }
 
-.App-content {
-  margin-top: 90px;
+nav form {
+  display: flex;
+  height: 30px;
 }
 
-.App-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-.App-nav button {
-  font-size: 25px;
-  background: transparent;
-  color: black;
+nav form input {
   border: none;
-  cursor: pointer;
+  color: gray;
+  outline: 2px solid blueviolet;
+}
+nav form input[type=search] {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+nav form input[type=submit] {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+nav form input:focus{
+  outline: 2px solid var(--secondary-color);
+}
+nav ul {
+  list-style: none;
+  display: inline;
 }
 
-.App-nav-item {
-  list-style: none;
-  display: inline-block;
-  margin-right: 5%;
+.nav-list {
+  font-size: 20px;
+  display: inline-flex;
+  gap: 20px;
 }
 
 .App-nav-item button:hover {
@@ -64,12 +81,23 @@ body {
   color: #f8e8e8;
 }
 
+.menu-icon{
+  display: none;
+}
+
+.App-content {
+  margin-top: 90px;
+}
+
 @media screen and (max-width: 678px) {
-  .App-nav button {
-    font-size: 20px;
+  .nav-list{
+    display: inline-flex;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
-  .App-nav-item {
-    margin-right: 2%;
+  .menu-icon{
+    display: block;
   }
 }
