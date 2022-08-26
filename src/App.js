@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import products from './adapters/static-data';
 import Nav from './components/AppNav';
 import './css/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import CartPage from './pages/CartPage';
@@ -53,9 +54,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
-        <Nav
-          productsInCart={productsInCart}
-        />
+        <Nav />
         <main className="App-content">
           <Routes>
             <Route path="/" element={<HomePage popularItems={popularItems(products)} onAddToCart={addToCart} />} />
