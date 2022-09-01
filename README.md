@@ -1,6 +1,6 @@
 # Patupa
 
-> Patupa is a a simple and fast shopping application that helps users can purchase online with no cost and short time of delivery.
+Patupa is a simple and fast online shopping application that helps users can purchase with no cost of delivery and short time delivery. Products are available in different categories and users can also search for any products of their choice. Users can add products to their cart and checkout anytime. Products can be rated by users and top-rated products are displayed on the home page.
 
 ## Build With
 
