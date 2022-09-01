@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import products from '../adapters/static-data';
-import Item from '../components/Product';
+import Item from '../components/product-card';
 import '../css/CartPage.css';
 import emptyCartImage from '../images/empty-shopping-cart.jpg';
 import Checkout from '../components/CheckoutPayment';
