@@ -18,3 +18,219 @@ h2 {
   color: var(--secondary-color);
   margin-left: 20px;
 }
+
+.carousel-image {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.carousel-caption {
+  font-weight: 900;
+  font-family: 'Poppins';
+  position: absolute;
+  top: 20%;
+  color: black;
+}
+
+.top-rated-products-section,
+.latest-products-section {
+  background-color: var(--secondary-color);
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.top-rated {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  width: 90%;
+  margin: auto;
+}
+
+.top-rated h4,
+.latest-products h4 {
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+/* suggested products section */
+.suggested-container {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.suggested-container .line {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.suggested-container > .line > div {
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 3px;
+  border-radius: 200px;
+}
+
+.suggested-container h4 {
+  text-align: center;
+}
+
+.suggested-cards {
+  display: grid;
+  width: 96%;
+  margin: auto;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.suggested-cards .card {
+  margin: 10px auto;
+  box-shadow: 2px 4px 5px rgb(146, 142, 142);
+}
+
+/* latest products section */
+.latest-products {
+  background-color: #fff;
+  padding-top: 30px;
+  width: 96%;
+  margin: auto;
+}
+
+.latest-products-section .cards-container .card {
+  margin: 10px auto;
+  width: 230px;
+  box-shadow: 2px 4px 5px rgb(146, 142, 142);
+}
+
+/* our company section */
+.our-company-section {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  font-family: 'Poppins';
+}
+
+.our-company-section h4 {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.our-company-section p {
+  max-width: 700px;
+  font-size: 20px;
+  margin: auto;
+}
+
+.our-company-section button {
+  background-color: var(--primary-color);
+  width: fit-content;
+  border: none;
+  margin: auto;
+}
+
+.our-company-section button:hover {
+  background-color: #e09d20;
+  transform: scale(1.1);
+  transition: 0.5;
+}
+
+/* product card */
+.top-rated-products-section .cards-container .card {
+  margin: 10px auto;
+  width: 320px;
+  box-shadow: 2px 4px 5px rgb(146, 142, 142);
+}
+
+.cards-container .card:hover,
+.suggested-cards .card:hover {
+  box-shadow: 3px 6px 7px rgb(146, 142, 142);
+  transform: scale(1.02);
+  transition: 0.5;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Poppins';
+}
+
+.card-btns-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-btns-container a {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.card-btns-container a:hover {
+  background-color: #e09d20;
+  border: none;
+  color: #fff;
+}
+
+.top-rated-products-section .card,
+.suggested-cards .card {
+  height: 450px;
+}
+
+.top-rated-products-section .card-image,
+.suggested-cards .card-image {
+  width: 100%;
+  height: 300px;
+}
+
+.latest-products-section .card-image {
+  width: 100%;
+  height: 200px;
+}
+
+.latest-products-section .card {
+  height: 350px;
+}
+
+@media screen and (max-width: 1100px) {
+  .suggested-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-image {
+    height: 320px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+
+  .carousel-caption {
+    font-weight: 800;
+    font-size: 18px;
+    top: 0%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .suggested-cards {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+
+  .latest-products {
+    width: 80%;
+  }
+}

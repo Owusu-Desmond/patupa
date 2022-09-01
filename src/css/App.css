@@ -6,31 +6,61 @@
 
 :root {
   --primary-color: #fab12a;
-  --secondary-color: #3717ad;
+  --secondary-color: #cfc4f8;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 body {
-  background-color: #f8e8e8;
   font-family: 'Poppins', sans-serif;
 }
 
-.navbar{
-  background-color: var(--primary-color);
+.navbar {
+  background-color: #f8f8f8;
 }
 
-@media screen and (max-width: 678px) {
-  .nav-list{
-    display: inline-flex;
-    position: absolute;
-    top: 0;
-    right: 0;
+.nav-bland {
+  border: 5px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 50px;
+  padding: 10px;
+  font-weight: 900;
+}
+
+.nav-bland a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.nav-bland a:hover {
+  color: var(--primary-color);
+}
+
+.nav-user-dropdown {
+  background-color: lightgray;
+  padding: 10px;
+  color: blue;
+  border-radius: 7px;
+}
+
+.nav-link a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .container {
+    width: 100%;
   }
 
-  .menu-icon{
+  .menu-icon {
     display: block;
+  }
+
+  .nav-dropdown,
+  .nav-user-dropdown,
+  .nav-link {
+    text-align: center;
   }
 }
