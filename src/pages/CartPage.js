@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import products from '../adapters/static-data';
 import Item from '../components/product-card';
 import '../css/CartPage.css';
 import emptyCartImage from '../images/empty-shopping-cart.jpg';
 import Checkout from '../components/CheckoutPayment';
 
 function CartPage({
-  cartItems, onAddOne, onRemoveOne, onAddToCart,
+  cartItems, onAddOne, onRemoveOne,
 }) {
   const emptyCart = (cartItems) => {
     let cart;
@@ -19,33 +18,6 @@ function CartPage({
       );
     }
     return cart;
-  };
-  const productsYouMayLike = (cartItems, products) => {
-    const suggestedProducts = [...products];
-    // sort products and ramdomly to make them changes
-    suggestedProducts.sort(() => 0.5 - Math.random());
-    let productsYouMayLike = '';
-    if (cartItems.length < 3) {
-      suggestedProducts.length = 3 - cartItems.length;
-      productsYouMayLike = (
-        <ul className="cart-products-container">
-          {
-            suggestedProducts.map((item) => (
-              <li key={item.id} className="cart-product-card">
-                <Item item={item} suggested>
-                  <div className="product-button">
-                    <button type="button" onClick={() => onAddToCart(item)}>
-                      Add to cart
-                    </button>
-                  </div>
-                </Item>
-              </li>
-            ))
-          }
-        </ul>
-      );
-    }
-    return productsYouMayLike;
   };
 
   return (
@@ -76,10 +48,10 @@ function CartPage({
             }
           </span>
         </p>
-        <div className="suggested-product">
+        {/* <div className="suggested-product">
           { cartItems.length < 3 ? <p>Suggested for you. </p> : ''}
           {productsYouMayLike(cartItems, products)}
-        </div>
+        </div> */}
       </div>
       <Checkout cartItems={cartItems} />
     </div>
@@ -97,7 +69,6 @@ CartPage.propTypes = {
   })).isRequired,
   onAddOne: PropTypes.func.isRequired,
   onRemoveOne: PropTypes.func.isRequired,
-  onAddToCart: PropTypes.func.isRequired,
 };
 
 export default CartPage;

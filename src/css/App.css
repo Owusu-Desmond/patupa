@@ -34,6 +34,10 @@ body {
   text-decoration: none;
 }
 
+.nav-link a {
+  text-decoration: none;
+}
+
 .nav-bland a:hover {
   color: var(--primary-color);
 }
@@ -43,10 +47,6 @@ body {
   padding: 10px;
   color: blue;
   border-radius: 7px;
-}
-
-.nav-link a {
-  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
