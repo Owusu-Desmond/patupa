@@ -1,6 +1,6 @@
 # Patupa
 
-> Patupa is a a simple and fast shopping application that helps users can purchase online with no cost and short time of delivery.
+Patupa is a simple and fast online shopping application that helps users can purchase with no cost of delivery and short time delivery. Products are available in different categories and users can also search for any products of their choice. Users can add products to their cart and checkout anytime. Products can be rated by users and top-rated products are displayed on the home page.
 
 ## Build With
 
@@ -19,7 +19,7 @@ https://user-images.githubusercontent.com/92303891/184237104-54deb4ac-45cd-491d-
 
 ## Live Demo
 
-Access the online version of this app [Live link](https://patupa.herokuapp.com/)
+Access the online version of this app [here](https://patupa.herokuapp.com/)
 
 ## Getting Started
 

@@ -1,43 +1,91 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Item from '../components/Product';
-import welcomeImage from '../images/shopping-welcome2.jpg';
+import React, { useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
+import { useSelector, useDispatch } from 'react-redux';
+import Carousel from 'react-bootstrap/Carousel';
+// import actions
+import { fetchProducts } from '../store/products/products';
+import { setIndex } from '../store/slideShow/slideShow';
+// import carousel images
+import carouselImage3 from '../images/eCommerce website templates image1.jpg';
+import carouselImage2 from '../images/cloths-shopping-online.jpg';
+import carouselImage1 from '../images/stock-photo-online-shopping-concept.jpg';
+// import components
+import Suggested from '../components/suggested-products';
+import TopRated from '../components/top-rated-products';
 import '../css/HomePage.css';
-import '../css/products.css';
+import LatestProducts from '../components/latest-products';
 
-function HomePage({ popularItems, onAddToCart }) {
+function HomePage() {
+  const products = useSelector((state) => state.products);
+  const index = useSelector((state) => state.slideShow);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (products.length === 0) {
+      dispatch(fetchProducts());
+    }
+  }, []);
+
+  const handleSelect = (selectedIndex) => {
+    dispatch(setIndex(selectedIndex));
+  };
   return (
     <div className="home-container">
-      <img src={welcomeImage} alt="shopping welcome" className="home-image" />
-      <p className="home-description">Buy products from PaTuPa shopping for free of charge.</p>
-      <h2>Popular Items</h2>
-      <div className="products-container">
-        {
-          popularItems.map((item) => (
-            <div key={item.id} className="product-card">
-              <Item item={item}>
-                <div className="product-button">
-                  <button type="button" onClick={() => onAddToCart(item)}>
-                    Buy
-                  </button>
-                </div>
-              </Item>
-            </div>
-          ))
-        }
-      </div>
+      <Carousel activeIndex={index} indicators={false} onSelect={handleSelect}>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 carousel-image"
+            src={carouselImage1}
+            alt="First slide"
+          />
+          <Carousel.Caption className="carousel-caption">
+            <h3>Fashion & Clothing is the one makes you look awesome and unique from others!</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 carousel-image"
+            src={carouselImage2}
+            alt="Second slide"
+          />
+          <Carousel.Caption>
+            <h3>
+              Online shopping in Ghana for men, women and kids. Buy dress, beauty
+              products, cosmetics, perfume, jewelries, watches, shoes, bags at
+            </h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 carousel-image"
+            src={carouselImage3}
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h3>
+              Our company, launched in 2018 in Ghana,
+              Patupa.com is the leading platform for online businesses
+              serving suppliers and buyers around the world meet each
+              other through our simple tool
+            </h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+      <LatestProducts />
+      <TopRated />
+      <Suggested />
+      <section className="our-company-section">
+        <h4>Our Company</h4>
+        <p>
+          Our company, launched in 2018 in Ghana, Patupa.com is the
+          leading platform for online businesses
+          serving suppliers and buyers around the world meet each
+          other through our simple tool
+        </p>
+        <Button>Read more</Button>
+      </section>
     </div>
   );
 }
-HomePage.propTypes = {
-  popularItems: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    description: PropTypes.string,
-    price: PropTypes.number,
-    house: PropTypes.string,
-    popularity: PropTypes.bool,
-  })).isRequired,
-  onAddToCart: PropTypes.func.isRequired,
-};
+
 export default HomePage;
