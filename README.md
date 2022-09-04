@@ -1,4 +1,8 @@
-# Patupa
+<h1 align="center"> 
+
+![patupa logo](https://user-images.githubusercontent.com/92303891/188333198-6435c863-fdeb-4acd-8ff7-39c31f854e7d.svg)
+
+</h1>
 
 Patupa is a simple and fast online shopping application that helps users can purchase with no cost of delivery and short time delivery. Products are available in different categories and users can also search for any products of their choice. Users can add products to their cart and checkout anytime. Products can be rated by users and top-rated products are displayed on the home page.
 
