@@ -1,6 +1,6 @@
 <h1 align="center"> 
 
-![patupa logo](https://user-images.githubusercontent.com/92303891/188333198-6435c863-fdeb-4acd-8ff7-39c31f854e7d.svg)
+![logo (2)](https://user-images.githubusercontent.com/92303891/188518508-56fdb0fe-80b8-4fec-9aad-8f59a868d7a6.svg)
 
 </h1>
 
