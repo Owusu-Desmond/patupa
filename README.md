@@ -42,6 +42,18 @@ git clone https://github.com/Owusu-Desmond/patupa.git
 Alternatively, you can just download the complete zip file and extract the folder in your directory
 
 #### Step 2
+Navigate to the project directory and rename the `.env.example` file to `.env` and add your own values
+
+in the `.env` file
+
+```
+REACT_APP_AUTH0_DOMAIN=YOUR_AUTH0_DOMAIN
+REACT_APP_AUTH0_CLIENT_ID=YOUR_AUTH0_CLIENT_ID
+REACT_APP_AUTH0_CALLBACK_URL=YOUR_AUTH0_CALLBACK_URL
+
+```
+
+#### Step 3
 In the project directory, you can run:
 
 ``` 
