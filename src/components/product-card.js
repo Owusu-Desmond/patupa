@@ -10,12 +10,12 @@ const ProductCard = ({ product }) => (
     <Card.Body>
       <Card.Title>{product.title}</Card.Title>
       <div className="card-btns-container">
-        <span className="product-stars btn">
+        <span className="product-stars">
           {product.rating.rate}
-          k stars
+          k
         </span>
         {/* link to product route */}
-        <Link to={`/product/id=${product.id}`} className="btn btn-sm">shop now</Link>
+        <Link to={`/product/id=${product.id}`}>shop</Link>
       </div>
     </Card.Body>
   </Card>
