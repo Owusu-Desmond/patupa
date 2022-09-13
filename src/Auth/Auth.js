@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 export default class Auth {
   constructor() {
     this.navigate = useNavigate();
+    this.userProfile = null;
     this.auth0 = new authO.WebAuth({
       domain: process.env.REACT_APP_AUTH0_DOMAIN,
       clientID: process.env.REACT_APP_AUTH0_CLIENT_ID,
@@ -53,9 +54,28 @@ export default class Auth {
       localStorage.removeItem('access_token');
       localStorage.removeItem('id_token');
       localStorage.removeItem('expires_at');
+      this.userProfile = null;
       this.auth0.logout({
         clientID: 'iZEUNlaqVrQmKM1aFOabIwXpQalSG9PJ',
         returnTo: 'http://localhost:3000',
       });
     }
-  }
+
+    // get user access token
+    getAccessToken = () => {
+      const accessToken = localStorage.getItem('access_token');
+      if (!accessToken) {
+        throw new Error('No access token found');
+      }
+      return accessToken;
+    }
+
+    getProfile = (cb) => {
+      if (this.userProfile) return cb(this.userProfile);
+      // expected to return a value at the end of arrow function
+      return this.auth0.client.userInfo(this.getAccessToken(), (err, profile) => {
+        if (profile) this.userProfile = profile;
+        cb(profile, err);
+      });
+    }
+}
