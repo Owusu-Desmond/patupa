@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "auth0-js": "^9.19.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "gh-pages": "^4.0.0",
@@ -18,8 +19,7 @@
     "react-elastic-carousel": "^0.11.5",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.0",
-    "react-uuid": "^1.0.2",
+    "react-scripts": "^5.0.0",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
