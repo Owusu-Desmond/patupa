@@ -1,74 +1,116 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Item from '../components/product-card';
+import { useSelector, useDispatch } from 'react-redux';
 import '../css/CartPage.css';
 import emptyCartImage from '../images/empty-shopping-cart.jpg';
-import Checkout from '../components/CheckoutPayment';
+import { addToCart, removeOne, deleteProduct } from '../store/cart/cart';
 
-function CartPage({
-  cartItems, onAddOne, onRemoveOne,
-}) {
-  const emptyCart = (cartItems) => {
-    let cart;
-    if (cartItems.length === 0) {
-      cart = (
+function CartPage() {
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  const emptyCart = (cart) => {
+    let cartContent;
+    if (cart.length === 0) {
+      cartContent = (
         <li className="cart-empty">
           <img src={emptyCartImage} alt="empty cart" />
         </li>
       );
     }
-    return cart;
+    return cartContent;
   };
 
   return (
-    <div className="cart-container">
-      <div>
-        <ul className="cart-products-container">
-          {emptyCart(cartItems)}
-          {
-            cartItems.map((item) => (
-              <li key={item.id} className="cart-product-card">
-                <Item item={item}>
-                  <div className="product-controls">
-                    <button type="button" onClick={() => onRemoveOne(item)}>-</button>
-                    <button type="button" className="product-control-count">{item.count}</button>
-                    <button type="button" onClick={() => onAddOne(item)}>+</button>
+    <>
+      <h2 className="my-cart-text">My Cart</h2>
+      <div className="cart-container">
+        <div>
+          <div className="cart-products-container">
+            {emptyCart(cart)}
+            {
+            cart.map((item) => (
+              <div key={item.id}>
+                <div className="cart-product">
+                  <div>
+                    <img src={item.image} alt={item.title} />
                   </div>
-                </Item>
-              </li>
+                  <div className="cart-product-info">
+                    <h3>{item.title}</h3>
+                    <button className="delete-btn" type="button" onClick={() => dispatch(deleteProduct(item.id))}>Delete</button>
+
+                    <p>
+                      <span>Price: </span>
+                      $
+                      {(item.price * item.count).toFixed}
+                    </p>
+                    <p>
+                      <span>Purchase count: </span>
+                      <span>{item.rating.count}</span>
+                    </p>
+                    <div className="quantity">
+                      {' '}
+                      Quantity:
+                      <button type="button" onClick={() => dispatch(removeOne(item))}>-</button>
+                      <span>{item.count}</span>
+                      <button type="button" onClick={() => dispatch(addToCart(item))}>+</button>
+                    </div>
+                    {/* additional information about item deliverly */}
+                    <p>
+                      <span>Delivery: </span>
+                      <span className="text-right">Free</span>
+                    </p>
+                    <p>
+                      <span>Shipping time: </span>
+                      <span className="text-right">4-5 business days</span>
+                    </p>
+                    <button className="delete-btn" type="button">Save for later</button>
+                  </div>
+                </div>
+                <hr />
+              </div>
             ))
           }
-        </ul>
-        <p className="cart-total-cost">
-          <span>Total Cost :</span>
-          <span>
-            $
-            {
-              cartItems.reduce((toatalCost, item) => toatalCost + (item.count * item.price), 0)
+          </div>
+        </div>
+        <div className="checkout-section">
+          <div className="checkout-container">
+            <h4>Checkout Payment </h4>
+            <div className="choose-product">Choose any product to buy from us digitally</div>
+            <hr />
+            <h4>My products</h4>
+            <div className="my-products-content">
+              {
+              cart.length === 0 ? <p>Your Cart is empty</p>
+                : cart.map((item) => (
+                  <>
+                    <p key={item.id} className="checkout-product">
+                      <input type="checkbox" checked />
+                      <span>
+                        {item.title}
+                        ($
+                        {(item.price * item.count).toFixed(2)}
+                        )
+                      </span>
+                    </p>
+                    <hr />
+                  </>
+                ))
             }
-          </span>
-        </p>
-        {/* <div className="suggested-product">
-          { cartItems.length < 3 ? <p>Suggested for you. </p> : ''}
-          {productsYouMayLike(cartItems, products)}
-        </div> */}
+              <div className="total-cost-to-checkout">
+                <div>Total :</div>
+                <div>
+                  $
+                  {cart.reduce((toatalCost, item) => toatalCost + (item.count * item.price), 0)}
+                </div>
+              </div>
+            </div>
+            <button type="button" className="checkout-btn">Checkout</button>
+          </div>
+        </div>
       </div>
-      <Checkout cartItems={cartItems} />
-    </div>
+    </>
+
   );
 }
-
-CartPage.propTypes = {
-  cartItems: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    description: PropTypes.string,
-    price: PropTypes.number,
-    house: PropTypes.string,
-    popularity: PropTypes.bool,
-  })).isRequired,
-  onAddOne: PropTypes.func.isRequired,
-  onRemoveOne: PropTypes.func.isRequired,
-};
 
 export default CartPage;
