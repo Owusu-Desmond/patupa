@@ -1,32 +1,51 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { PropTypes } from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-// import logo from '../images/logo.jpg';
+import { useSelector, useDispatch } from 'react-redux';
+import { Button } from 'react-bootstrap';
+import { getUserDetails } from '../store/user/user';
 import '../css/App.css';
+import logo from '../images/logo.svg';
 
-const AppNav = () => {
-  const [show, setShow] = useState(false);
-  const showDropdown = () => {
-    setShow(!show);
+const AppNav = ({ auth }) => {
+  const cart = useSelector((state) => state.cart);
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
+  const loadUserProfile = () => {
+    auth.getProfile((profile, error) => {
+      dispatch(getUserDetails({ profile, error }));
+    });
   };
-  const hideDropdown = () => {
-    setShow(false);
-  };
+
+  useEffect(() => {
+    if (auth.isAuthenticated()) {
+      loadUserProfile();
+    }
+  }, [auth]); // when auth changes, load user profile
+
+  const { profile } = user;
+
   return (
     <Navbar className="navbar fs-5" expand="lg">
       <Container>
         <Navbar.Brand className="nav-bland">
-          <NavLink to="/">Patupa.com</NavLink>
+          <NavLink to="/">
+            <img className="logo" src={logo} alt="logo" />
+          </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link>
-              <NavLink to="/categories">Categories</NavLink>
-            </Nav.Link>
+            <div className="nav-text">
+              <NavLink to="/categories" className="nav-link">
+                Categories
+              </NavLink>
+            </div>
             <NavDropdown
               title="Customer service"
               id="basic-nav-dropdown"
@@ -41,9 +60,6 @@ const AppNav = () => {
               title="About Patupa"
               id="basic-nav-dropdown"
               className="nav-dropdown"
-              show={show}
-              onMouseEnter={showDropdown}
-              onMouseLeave={hideDropdown}
             >
               <NavDropdown.Item href="#Our-company">Our Company</NavDropdown.Item>
               <NavDropdown.Item href="#Careers">Careers</NavDropdown.Item>
@@ -62,23 +78,47 @@ const AppNav = () => {
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end">
-          <NavDropdown
-            title="Welcome, Desmond !"
-            id="basic-nav-dropdown"
-            className="nav-user-dropdown"
-          >
-            <NavDropdown.Item href="#action/3.1">My account</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Track my order</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">logout</NavDropdown.Item>
-          </NavDropdown>
+          {auth.isAuthenticated() ? (
+            <>
+              <NavDropdown
+                title={(
+                  <span>
+                    Welcome
+                    <br />
+                    { (profile) ? profile.given_name : '' }
+                    {' '}
+                  </span>
+)}
+                id="basic-nav-dropdown"
+                className="nav-user-dropdown"
+              >
+                <NavDropdown.Item href="#action/3.1">My account</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Track my order</NavDropdown.Item>
+                <hr />
+                <NavDropdown.Item>
+                  <button type="button" onClick={auth.logout} className="nav-logout-btn">Logout</button>
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavLink to="/cart">
+                <div className="cart-icon"><span>{cart.length}</span></div>
+              </NavLink>
+            </>
+          ) : (
+            <Button onClick={auth.login} className="nav-login-btn">Login</Button>
+          )}
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 };
 
-// Nav.propTypes = {
-//   productsInCart: PropTypes.number.isRequired,
-// };
+AppNav.propTypes = {
+  auth: PropTypes.shape({
+    isAuthenticated: PropTypes.func.isRequired,
+    login: PropTypes.func.isRequired,
+    logout: PropTypes.func.isRequired,
+    getProfile: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 export default AppNav;
