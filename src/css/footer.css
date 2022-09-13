@@ -1,6 +1,5 @@
 footer {
-  background-color: white;
-  border-top-right-radius: 150px;
+  background-color: var(--secondary-color-deep);
 }
 
 .footer-custom {
@@ -29,6 +28,7 @@ footer ul {
 .ftr-links-sub li a {
   text-decoration: none;
   font-weight: 600;
+  color: #073e8f;
 }
 
 .ftr-links-sub span {
@@ -41,7 +41,7 @@ footer ul {
 }
 
 .footer-social h6 {
-  color: blue;
+  color: #073e8f;
   font-size: 25px;
   text-align: center;
   margin: 20px auto;
