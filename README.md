@@ -17,9 +17,7 @@ Patupa is a simple and fast online shopping application that helps users can pur
   
 ## Screenshot 
 
-
-https://user-images.githubusercontent.com/92303891/184237104-54deb4ac-45cd-491d-9656-aefc68d35850.mp4
-
+[Screencast of patupa shopping app](https://user-images.githubusercontent.com/92303891/190108602-4b5e8713-aca5-4289-981e-8468d5658715.webm)
 
 ## Live Demo
 
