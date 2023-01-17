@@ -41,7 +41,7 @@ function CartPage() {
                     <p>
                       <span>Price: </span>
                       $
-                      {(item.price * item.count).toFixed}
+                      {item.price * item.count}
                     </p>
                     <p>
                       <span>Purchase count: </span>
