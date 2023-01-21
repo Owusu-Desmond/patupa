@@ -14,6 +14,8 @@ Patupa is a simple and fast online shopping application that helps users can pur
   - [x] HTML
   - [x] CSS
   - [x] JavaScript
+  - [x] Auth0
+  - [x] React + Redux
   
 ## Screenshot 
 

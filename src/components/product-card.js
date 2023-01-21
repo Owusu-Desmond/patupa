@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => (
           k
         </span>
         {/* link to product route */}
-        <Link to={`/product/id=${product.id}`}>shop</Link>
+        <Link to={`/product/${product.id}`}>shop</Link>
       </div>
     </Card.Body>
   </Card>

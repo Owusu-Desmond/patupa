@@ -38,7 +38,7 @@ const App = () => {
           )}
 
           {products.map((product) => (
-            <Route key={product.id} path={`/product/id=${product.id}`} element={<ProductPage product={product} auth={auth} />} />
+            <Route key={product.id} path={`/product/${product.id}`} element={<ProductPage product={product} auth={auth} />} />
           ))}
           <Route path="/callback" element={<Callback auth={auth} />} />
         </Routes>
