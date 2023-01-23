@@ -31,8 +31,9 @@ const AppNav = ({ auth }) => {
   const { profile } = user;
 
   return (
-    <Navbar className="navbar fs-5" expand="lg">
-      <Container>
+    <Navbar className="navbar fs-5 px-4" expand="lg">
+      {/* use container fluild */}
+      <Container fluid>
         <Navbar.Brand className="nav-bland">
           <NavLink to="/">
             <img className="logo" src={logo} alt="logo" />
@@ -40,7 +41,13 @@ const AppNav = ({ auth }) => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          {/* center the navlinks */}
+          <Nav className="d-flex justify-content-center w-100">
+            <div className="nav-text">
+              <NavLink to="/" className="nav-link">
+                Home
+              </NavLink>
+            </div>
             <div className="nav-text">
               <NavLink to="/categories" className="nav-link">
                 Categories
