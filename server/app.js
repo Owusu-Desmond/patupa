@@ -2,9 +2,9 @@ const express = require("express");
 const api = require('./api')
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
 
-app.use('./api', api)
+app.use('/api', api)
 
 app.listen(PORT, (err) => {
     if (err) {
