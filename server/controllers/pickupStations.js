@@ -42,3 +42,5 @@ const AddNewStation = async (req, res) => {
       isSuccess: true,
     });
 };
+
+module.exports = {AddNewStation, getAllStations}
