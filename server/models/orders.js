@@ -26,7 +26,8 @@ const orderSchema = new Schema(
     currency: String,
     status: {
       type: String,
-      enum: ["pending", "delivered", "failed"],
+      default: 'pending',
+      enum: ["pending", "delivered",],
     },
     deliveryAddress: {
       type: mongoose.Schema.Types.ObjectId,
