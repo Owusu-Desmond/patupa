@@ -3,7 +3,7 @@ const {
     getCustomerById,
     addNewCustomer,
     updateCustomer,
-} = require('../../controllers/categories')
+} = require('../../controllers/customers')
 
 
 module.exports = (router) => {
